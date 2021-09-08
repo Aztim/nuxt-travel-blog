@@ -23,4 +23,5 @@ export default {
   /* @import './assets/css/App.css'; */
   /* src="@/assets/App.css" */
   /* @import '@/assets/App.css'; */
+  /* test */
 </style>
