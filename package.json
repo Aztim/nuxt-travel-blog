@@ -1,63 +1,30 @@
 {
-  "name": "v-hotel-app",
-  "version": "0.1.0",
+  "name": "hotel-nuxt-app",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
   },
   "dependencies": {
-    "axios": "^0.21.0",
-    "bootstrap-vue": "^2.1.0",
-    "core-js": "^3.6.4",
-    "firebase": "^7.14.1",
-    "font-awesome": "^4.7.0",
-    "sweetalert2": "^9.10.12",
-    "vue": "^2.6.11",
-    "vue-router": "^3.1.6",
-    "vuex": "^3.6.0"
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.7.0",
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-plugin-router": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "bootstrap": "^4.3.1",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "mutationobserver-shim": "^0.3.3",
-    "popper.js": "^1.16.0",
-    "portal-vue": "^2.1.6",
-    "sass": "^1.19.0",
-    "sass-loader": "^8.0.0",
-    "vue-cli-plugin-bootstrap-vue": "^0.6.0",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "fibers": "^5.0.0",
+    "prettier": "^2.3.2",
+    "sass": "^1.39.0",
+    "sass-loader": "^10.2.0"
+  }
 }
