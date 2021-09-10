@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'hotel-nuxt-app',
+    title: 'nuxt-hotel-app',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,7 +18,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // '@/assets/default.scss',
+    '@/assets/default.scss',
     '@/assets/main.css'
     // { src: '~/assets/default.scss', lang: 'scss' },
     // { src: '~/assets/main.css', lang: 'css' }
@@ -33,8 +33,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
