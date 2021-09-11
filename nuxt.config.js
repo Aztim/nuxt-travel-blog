@@ -14,6 +14,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+    // link: [
+    //   {rel:"stylesheet", href: 'https://fonts.googleapis.com/icon?family=Material+Icons'}
+    // ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -24,6 +27,11 @@ export default {
     // { src: '~/assets/main.css', lang: 'css' }
   ],
 
+  script:[
+    {src: "https://kit.fontawesome.com/4d36f93e30.js", crossorigin: "anonymous"},
+  ],
+
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
@@ -33,10 +41,12 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
