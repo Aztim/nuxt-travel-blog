@@ -12,10 +12,11 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:"stylesheet", href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap'}
     ]
     // link: [
-    //   {rel:"stylesheet", href: 'https://fonts.googleapis.com/icon?family=Material+Icons'}
+    //   {rel:"stylesheet", href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap'}
     // ]
   },
 
@@ -28,7 +29,7 @@ export default {
   ],
 
   script:[
-    {src: "https://kit.fontawesome.com/4d36f93e30.js", crossorigin: "anonymous"},
+    // {src: "https://kit.fontawesome.com/4d36f93e30.js", crossorigin: "anonymous"},
   ],
 
 
