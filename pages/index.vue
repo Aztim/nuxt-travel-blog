@@ -1,7 +1,14 @@
 <template>
-  <Tutorial/>
+  <div>
+    <Promo/>
+  </div>
 </template>
 
 <script>
-export default {}
+import Promo from '@/components/Promo.vue'
+export default {
+  components : {
+    Promo
+  }
+}
 </script>

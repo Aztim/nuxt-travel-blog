@@ -2,8 +2,7 @@
   {
     "name": "index",
     "path": "/",
-    "component": "/home/tim/Рабочий стол/nuxt-travel-app/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_36d2501a"
+    "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/index.vue",
+    "chunkName": "pages/index"
   }
 ]
