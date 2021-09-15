@@ -5,6 +5,12 @@
   "Promo": {
     "description": "Auto imported from components/Promo.vue"
   },
+  "BlogPostPreview": {
+    "description": "Auto imported from components/Blog/PostPreview.vue"
+  },
+  "BlogPostsList": {
+    "description": "Auto imported from components/Blog/PostsList.vue"
+  },
   "UIIntro": {
     "description": "Auto imported from components/UI/Intro.vue"
   }

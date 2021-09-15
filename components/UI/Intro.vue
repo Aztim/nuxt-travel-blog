@@ -1,5 +1,5 @@
 <template>
-  <section class="intro" id="intro">
+  <!-- <section class="intro" id="intro"> -->
      <h1 class="heading">
         <span v-for="(l, index) in letters"
         :key="index"
@@ -7,7 +7,7 @@
         >{{l}}</span>
       <slot />
     </h1>
-  </section>
+  <!-- </section> -->
 </template>
 
 <script>

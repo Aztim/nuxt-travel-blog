@@ -12,16 +12,16 @@
   transition: all .2s linear;
 }
 
-/* *::selection{
+*::selection{
   background:var(--orange);
   color:#fff;
-} */
+}
 
-ul, li {
+/* ul, li {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
+} */
 
 html{
   font-size: 62.5%;
@@ -53,7 +53,7 @@ header .logo span{
   color:var(--orange);
 }
 
-.content {
+header .content {
   display: flex;
   align-items: center;
   justify-content: space-between;

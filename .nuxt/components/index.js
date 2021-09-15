@@ -1,5 +1,7 @@
 export { default as Header } from '../../components/Header.vue'
 export { default as Promo } from '../../components/Promo.vue'
+export { default as BlogPostPreview } from '../../components/Blog/PostPreview.vue'
+export { default as BlogPostsList } from '../../components/Blog/PostsList.vue'
 export { default as UIIntro } from '../../components/UI/Intro.vue'
 
 // nuxt/nuxt.js#8607

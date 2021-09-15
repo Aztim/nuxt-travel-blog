@@ -8,4 +8,6 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Header>` | `<header>` (components/Header.vue)
 - `<Promo>` | `<promo>` (components/Promo.vue)
+- `<BlogPostPreview>` | `<blog-post-preview>` (components/Blog/PostPreview.vue)
+- `<BlogPostsList>` | `<blog-posts-list>` (components/Blog/PostsList.vue)
 - `<UIIntro>` | `<u-i-intro>` (components/UI/Intro.vue)
