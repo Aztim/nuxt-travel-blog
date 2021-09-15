@@ -2,6 +2,9 @@
   "Contacts": {
     "description": "Auto imported from components/Contacts.vue"
   },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },

@@ -1,4 +1,5 @@
 export { default as Contacts } from '../../components/Contacts.vue'
+export { default as Footer } from '../../components/Footer.vue'
 export { default as Header } from '../../components/Header.vue'
 export { default as Promo } from '../../components/Promo.vue'
 export { default as BlogPostPreview } from '../../components/Blog/PostPreview.vue'
