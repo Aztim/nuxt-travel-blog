@@ -1,8 +1,13 @@
+export { default as Contacts } from '../../components/Contacts.vue'
 export { default as Header } from '../../components/Header.vue'
 export { default as Promo } from '../../components/Promo.vue'
 export { default as BlogPostPreview } from '../../components/Blog/PostPreview.vue'
 export { default as BlogPostsList } from '../../components/Blog/PostsList.vue'
 export { default as UIIntro } from '../../components/UI/Intro.vue'
+export { default as UIMessage } from '../../components/UI/Message.vue'
+export { default as UIControlsButton } from '../../components/UI/Controls/Button.vue'
+export { default as UIControlsInput } from '../../components/UI/Controls/Input.vue'
+export { default as UIControlsTextArea } from '../../components/UI/Controls/TextArea.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

@@ -2,14 +2,17 @@
   <div>
     <Promo/>
     <PostsList :posts="posts" />
+    <Contacts/>
   </div>
 </template>
 
 <script>
 import Promo from '@/components/Promo.vue'
+import Contacts from '@/components/Contacts.vue'
 export default {
   components : {
-    Promo
+    Promo,
+    Contacts
   },
   data () {
     return {
@@ -22,7 +25,7 @@ export default {
         },
         {
           id: 2,
-          title: 'Hawaii',
+          title: 'Norway',
           descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
           img: require('~/assets/images/p-2.jpg'),
         },

@@ -1,4 +1,7 @@
 {
+  "Contacts": {
+    "description": "Auto imported from components/Contacts.vue"
+  },
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },
@@ -13,5 +16,17 @@
   },
   "UIIntro": {
     "description": "Auto imported from components/UI/Intro.vue"
+  },
+  "UIMessage": {
+    "description": "Auto imported from components/UI/Message.vue"
+  },
+  "UIControlsButton": {
+    "description": "Auto imported from components/UI/Controls/Button.vue"
+  },
+  "UIControlsInput": {
+    "description": "Auto imported from components/UI/Controls/Input.vue"
+  },
+  "UIControlsTextArea": {
+    "description": "Auto imported from components/UI/Controls/TextArea.vue"
   }
 }
