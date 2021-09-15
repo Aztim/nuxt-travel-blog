@@ -4,5 +4,8 @@
   },
   "Promo": {
     "description": "Auto imported from components/Promo.vue"
+  },
+  "UIIntro": {
+    "description": "Auto imported from components/UI/Intro.vue"
   }
 }

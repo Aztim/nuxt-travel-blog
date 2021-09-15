@@ -3,6 +3,7 @@
     "name": "index",
     "path": "/",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_65261469"
   }
 ]

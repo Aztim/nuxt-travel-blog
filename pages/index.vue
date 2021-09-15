@@ -1,6 +1,7 @@
 <template>
   <div>
     <Promo/>
+    <Intro title="My lasts posts:"/>
   </div>
 </template>
 

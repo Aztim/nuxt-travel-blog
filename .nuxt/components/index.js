@@ -1,5 +1,6 @@
 export { default as Header } from '../../components/Header.vue'
 export { default as Promo } from '../../components/Promo.vue'
+export { default as UIIntro } from '../../components/UI/Intro.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
