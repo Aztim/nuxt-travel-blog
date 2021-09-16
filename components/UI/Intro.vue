@@ -1,7 +1,7 @@
 <template>
   <!-- <section class="intro" id="intro"> -->
      <h1 class="heading">
-        <span v-for="(l, index) in letters"
+        <span v-for="(l, index) in title"
         :key="index"
         :class="l === ' ' ? 'space' : null"
         >{{l}}</span>
@@ -20,12 +20,12 @@ export default {
   },
   data () {
     return {
-      letters: []
+      // letters: []
     }
   },
   mounted () {
     // this.letters = this.title.replace(/\s/g, '').split("")
-    this.letters = this.title.split("")
+    // this.letters = this.title.split("")
   }
 }
 </script>

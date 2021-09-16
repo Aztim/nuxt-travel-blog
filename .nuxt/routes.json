@@ -1,8 +1,16 @@
 [
   {
+    "name": "gallery",
+    "path": "/gallery",
+    "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/gallery/index.vue",
+    "chunkName": "pages/gallery/index",
+    "_name": "_ee1f3a28"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_65261469"
   }
 ]
