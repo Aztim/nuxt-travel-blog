@@ -29,34 +29,5 @@ export default {
 </script>
 
 <style>
-.box{
-  flex:1 1 30rem;
-  border-radius: .5rem;
-  overflow: hidden;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-}
-.box img{
-  height: 25rem;
-  width:100%;
-  object-fit: cover;
-}
 
-.content{
-  padding:2rem;
-}
-
-.content h3{
-  font-size:2rem;
-  color:#333;
-}
-
-/* .content h3 i{
-  color:var(--orange);
-} */
-
-.content p{
-  font-size:1.7rem;
-  color:#666;
-  padding:1rem 0;
-}
 </style>

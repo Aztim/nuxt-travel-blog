@@ -1,12 +1,11 @@
 <template>
   <section class="posts" id="posts">
-    <Intro title="My latest posts:"/>
-      <div class="box-container">
-          <PostPreview
-            v-for="post in posts" :key="post.id"
-            :admin="admin"
-            :post="post" />
-      </div>
+    <div class="box-container">
+      <PostPreview
+        v-for="post in posts" :key="post.id"
+        :admin="admin"
+        :post="post" />
+    </div>
   </section>
 </template>
 
@@ -27,7 +26,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 .box-container{
   display: flex;
   flex-wrap: wrap;

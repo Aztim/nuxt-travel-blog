@@ -12,6 +12,8 @@ You can directly use them in pages and other components without the need to impo
 - `<Promo>` | `<promo>` (components/Promo.vue)
 - `<BlogPostPreview>` | `<blog-post-preview>` (components/Blog/PostPreview.vue)
 - `<BlogPostsList>` | `<blog-posts-list>` (components/Blog/PostsList.vue)
+- `<GalleryPhoto>` | `<gallery-photo>` (components/Gallery/Photo.vue)
+- `<GalleryPhotoList>` | `<gallery-photo-list>` (components/Gallery/PhotoList.vue)
 - `<UIIntro>` | `<u-i-intro>` (components/UI/Intro.vue)
 - `<UIMessage>` | `<u-i-message>` (components/UI/Message.vue)
 - `<UIControlsButton>` | `<u-i-controls-button>` (components/UI/Controls/Button.vue)

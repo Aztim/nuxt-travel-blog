@@ -118,6 +118,27 @@ header .search-bar-container label:hover{
 /* End of Header */
 
 
+/* Footer */
+.footer{
+  background:#333;
+}
+
+.footer .credit{
+  text-align: center;
+  /* padding:2rem 1rem; */
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color:#fff;
+  border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span{
+  color:var(--orange);
+}
+/* End of Footer */
+
+
 /* Home */
 .home{
   min-height: 100vh;
@@ -179,7 +200,7 @@ header .search-bar-container label:hover{
 /* End of Home */
 
 
-section{
+section, footer, header{
   padding:2rem 9%;
 }
 
@@ -218,3 +239,34 @@ section{
   color:var(--orange);
 }
 
+
+.box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+.box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.content{
+  padding:2rem;
+}
+
+.content h3{
+  font-size:2rem;
+  color:#333;
+}
+
+/* .content h3 i{
+  color:var(--orange);
+} */
+
+.content p{
+  font-size:1.7rem;
+  color:#666;
+  padding:1rem 0;
+}

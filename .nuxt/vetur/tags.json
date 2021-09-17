@@ -17,6 +17,12 @@
   "BlogPostsList": {
     "description": "Auto imported from components/Blog/PostsList.vue"
   },
+  "GalleryPhoto": {
+    "description": "Auto imported from components/Gallery/Photo.vue"
+  },
+  "GalleryPhotoList": {
+    "description": "Auto imported from components/Gallery/PhotoList.vue"
+  },
   "UIIntro": {
     "description": "Auto imported from components/UI/Intro.vue"
   },

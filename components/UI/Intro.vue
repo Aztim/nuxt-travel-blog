@@ -1,13 +1,11 @@
 <template>
-  <!-- <section class="intro" id="intro"> -->
-     <h1 class="heading">
-        <span v-for="(l, index) in title"
-        :key="index"
-        :class="l === ' ' ? 'space' : null"
-        >{{l}}</span>
-      <slot />
-    </h1>
-  <!-- </section> -->
+  <h1 class="heading">
+    <span v-for="(l, index) in title"
+    :key="index"
+    :class="l === ' ' ? 'space' : null"
+    >{{l}}</span>
+    <slot />
+  </h1>
 </template>
 
 <script>
@@ -22,11 +20,11 @@ export default {
     return {
       // letters: []
     }
-  },
-  mounted () {
-    // this.letters = this.title.replace(/\s/g, '').split("")
-    // this.letters = this.title.split("")
   }
+  // mounted () {
+  //   this.letters = this.title.replace(/\s/g, '').split("")
+  //   this.letters = this.title.split("")
+  // }
 }
 </script>
 
