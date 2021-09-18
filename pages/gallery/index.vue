@@ -1,8 +1,7 @@
 <template>
-<div class="gallery">
-  <Intro title="Gallery:"/>
-  <PhotoList :photos="photos" />
-</div>
+  <div >
+    <PhotoList :photos="photos" />
+  </div>
 </template>
 
 <script>
@@ -65,21 +64,19 @@ export default {
           title: '9 post',
           descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
           img: require('~/assets/images/gallery/g-9.jpg')
-        },
-        {
-          id: 10,
-          title: '10 post',
-          descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          img: require('~/assets/images/gallery/g-10.jpg')
         }
+        // {
+        //   id: 10,
+        //   title: '10 post',
+        //   descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        //   img: require('~/assets/images/gallery/g-10.jpg')
+        // }
       ]
     }
   }
 }
 </script>
 
-<style lang="scss" style="scoped">
-.gallery .heading {
-  margin-top: 150px;
-}
+<style lang="scss" >
+
 </style>

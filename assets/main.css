@@ -270,3 +270,76 @@ section, footer, header{
   color:#666;
   padding:1rem 0;
 }
+
+
+/* Gallery */
+.gallery .heading {
+  margin-top: 100px;
+}
+
+.gallery .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 5px;
+}
+
+
+.gallery .image-container .image {
+  height: 350px;
+  width: 450px;
+  border: 10px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery .image-container .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+}
+
+.gallery .image-container .image:hover img{
+  transform: scale(1.1);
+}
+
+.gallery .popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: block;
+}
+
+.gallery .popup-image span{
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+.gallery .popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px){
+  .gallery .popup-image img {
+      width: 95%;
+  }
+}

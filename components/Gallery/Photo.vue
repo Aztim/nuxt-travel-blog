@@ -1,15 +1,11 @@
 <template>
-  <div class="box" @click="ShowPopupImage">
+  <div class="image" @click="showPopupImage">
     <img :src="photo.img" :alt="photo.title">
+
     <div class="content">
       <h3><i class="fas fa-map-marker-alt"></i>{{ photo.title }}</h3>
-      <p>{{ photo.descr }}</p>
+      <p></p>
     </div>
-
-    <!-- <div class="popup-image">
-      <span>&times;</span>
-      <img src="~/assets/images/gallery/g-1.jpg" alt="">
-    </div> -->
   </div>
 </template>
 
@@ -25,9 +21,10 @@ export default {
       default: false
     }
   },
-  methods: {
-    ShowPopupImage() {
 
+  methods: {
+    showPopupImage() {
+     this.$emit('popupImage', this.photo.img)
     }
   }
   // computed: {
