@@ -41,6 +41,30 @@ export default {
           title: 'Paris',
           descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
           img: require('~/assets/images/p-4.jpg'),
+        },
+        {
+          id: 5,
+          title: 'Cape Town',
+          descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          img: require('~/assets/images/p-5.jpg'),
+        },
+        {
+          id: 6,
+          title: 'Rome',
+          descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          img: require('~/assets/images/p-6.jpg'),
+        },
+        {
+          id: 7,
+          title: 'Los Angeles',
+          descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          img: require('~/assets/images/p-7.jpg'),
+        },
+        {
+          id: 8,
+          title: 'Moscow',
+          descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          img: require('~/assets/images/p-8.jpg'),
         }
       ]
     }

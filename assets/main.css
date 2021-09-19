@@ -350,7 +350,7 @@ section, footer, header{
 
 .hero {
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   position: relative;
   background-image: url(~/assets/images/boat/background.jpg);
   background-size: cover;

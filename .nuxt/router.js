@@ -5,7 +5,9 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _3569f527 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
+const _1b8a2cc4 = () => interopDefault(import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */))
 const _ee1f3a28 = () => interopDefault(import('../pages/gallery/index.vue' /* webpackChunkName: "pages/gallery/index" */))
+const _cfabf4ee = () => interopDefault(import('../pages/blog/_id/index.vue' /* webpackChunkName: "pages/blog/_id/index" */))
 const _65261469 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -24,9 +26,17 @@ export const routerOptions = {
     component: _3569f527,
     name: "about"
   }, {
+    path: "/blog",
+    component: _1b8a2cc4,
+    name: "blog"
+  }, {
     path: "/gallery",
     component: _ee1f3a28,
     name: "gallery"
+  }, {
+    path: "/blog/:id",
+    component: _cfabf4ee,
+    name: "blog-id"
   }, {
     path: "/",
     component: _65261469,
