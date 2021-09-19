@@ -1,77 +1,28 @@
 <template>
-   <section class="book" id="book">
+  <div class="wrapper-content wrapper-content--fixed">
+    <section class="about">
+          <Intro title="About my blog:"/>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
+      <div class="hero">
 
-    <div class="row">
+         <img src="~/assets/images/boat/cloud.png" class="cloud" alt="">
 
-        <div class="image">
-            <img src="~/assets/images/book-img.svg" alt="">
-        </div>
-
-        <form action="">
-            <div class="inputBox">
-                <h3>where to</h3>
-                <input type="text" placeholder="place name">
+          <div class="ocean">
+            <img src="~/assets/images/boat/water.png" class="water" alt="">
+            <div class="boat">
+              <img src="~/assets/images/boat/boat.png" alt="">
             </div>
-            <div class="inputBox">
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
-            </div>
-            <div class="inputBox">
-                <h3>arrivals</h3>
-                <input type="date">
-            </div>
-            <div class="inputBox">
-                <h3>leaving</h3>
-                <input type="date">
-            </div>
-            <input type="submit" class="btn" value="book now">
-        </form>
-
-    </div>
-
-</section>
+          </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style lang="scss">
-.book .row{
-  display: flex;
-  flex-wrap: wrap;
-  gap:1.5rem;
-  align-items: center;
+.about {
+  text-align: center;
+  p {
+    margin-bottom: 10px;
+  }
 }
-
-.book .row .image{
-  flex:1 1 40rem;
-}
-
-.book .row .image img{
-  width:100%;
-}
-
-.book .row form{
-  flex:1 1 40rem;
-  padding:2rem;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-  border-radius: .5rem;
-}
-
-.book .row form .inputBox{
-  padding:.5rem 0;
-}
-
-.book .row form .inputBox input{
-  width:100%;
-  padding:1rem;
-  border:.1rem solid rgba(0,0,0,.1);
-  font-size: 1.7rem;
-  color:#333;
-  text-transform: none;
-}
-
-.book .row form .inputBox h3{
-  font-size: 2rem;
-  padding:1rem 0;
-  color:#666;
-}
-
 </style>
