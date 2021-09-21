@@ -1,19 +1,19 @@
 <template>
   <div>
-    <promo/>
+    <Promo/>
     <Intro title="My latest posts:"/>
     <PostsList :posts="posts" />
-    <contacts/>
+    <Contacts/>
   </div>
 </template>
 
 <script>
-import promo from '@/components/Promo.vue'
-import contacts from '@/components/Contacts.vue'
+import Promo from '@/components/Promo.vue'
+import Contacts from '@/components/Contacts.vue'
 export default {
   components : {
-    promo,
-    contacts
+    Promo,
+    Contacts
   },
   data () {
     return {

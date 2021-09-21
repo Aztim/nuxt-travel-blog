@@ -1,18 +1,22 @@
 <template>
-  <div class="post">
-    <post :post="post" />
-    <!-- <comments :comments="comments" /> -->
-    <!-- <newComment /> -->
-  </div>
+  <section class="post_id" id="post_id">
+    <Intro title="Post"/>
+
+    <Post :post="post" />
+    <Comments :comments="comments" />
+    <!-- <NewComment /> -->
+
+  </section>
 </template>
 
 <script>
-import post from '@/components/Blog/Post.vue'
-// import newComment from '@/components/Comments/NewComment.vue'
-// import comments from '@/components/Comments/Comments.vue'
+import Post from '@/components/Blog/Post.vue'
+import Comments from '@/components/Comments/Comments.vue'
+import NewComment from '@/components/Comments/NewComment.vue'
+
 
 export default {
-  components: { post },
+  components: { Post,Comments, NewComment },
   data () {
     return {
       post: {
@@ -24,7 +28,7 @@ export default {
       },
       comments: [
         { name: 'Alex', text: 'Lorem ipsum dolor sit amet, consectetur' },
-        { name: 'Evgenii', text: 'Lorem ipsum dolor sit amet, consectetur' },
+        { name: 'John', text: 'Lorem ipsum dolor sit amet, consectetur' },
       ]
     }
   }
@@ -32,24 +36,41 @@ export default {
 </script>
 
 <style lang="scss">
-.post {
+
+.post_id {
   max-width: 900px;
   margin: 0 auto;
-   margin-top: 120px;
 }
-.post-header {
+.post_id .post-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   img {
     margin-bottom: 16px;
     max-width: 400px
   }
   p {
     color: #999999;
+    font-size:1.7rem;
   }
 }
 .post-body {
-  text-align: left;
+  text-align: center;
+  font-size: 1.1rem;
 }
 
+.comments {
+  margin: 30px auto;
+  text-align: center;
+}
+.comment {
+  padding: 20px;
+  width: 600px;
+  margin-bottom: 20px;
+  background-color: #eee;
+  .name {
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #5c4de7;
+  }
+}
 </style>

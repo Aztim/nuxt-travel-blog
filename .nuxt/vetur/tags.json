@@ -20,6 +20,12 @@
   "BlogPostsList": {
     "description": "Auto imported from components/Blog/PostsList.vue"
   },
+  "Comments": {
+    "description": "Auto imported from components/Comments/Comments.vue"
+  },
+  "CommentsNewComment": {
+    "description": "Auto imported from components/Comments/NewComment.vue"
+  },
   "GalleryPhoto": {
     "description": "Auto imported from components/Gallery/Photo.vue"
   },
