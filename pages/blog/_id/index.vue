@@ -4,7 +4,7 @@
 
     <Post :post="post" />
     <Comments :comments="comments" />
-    <!-- <NewComment /> -->
+    <NewComment />
 
   </section>
 </template>
@@ -36,6 +36,10 @@ export default {
 </script>
 
 <style lang="scss">
+.post_id .heading {
+  margin-top: 100px;
+}
+
 
 .post_id {
   max-width: 900px;
@@ -43,10 +47,14 @@ export default {
 }
 .post_id .post-header {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   img {
-    margin-bottom: 16px;
+    margin-bottom: 5px;
     max-width: 400px
+  }
+
+  h1 {
+    font-size:2.5rem;
   }
   p {
     color: #999999;
@@ -58,8 +66,8 @@ export default {
   font-size: 1.1rem;
 }
 
-.comments {
-  margin: 30px auto;
+.title{
+  margin: 30px 0;
   text-align: center;
 }
 .comment {

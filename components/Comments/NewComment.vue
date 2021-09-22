@@ -1,5 +1,6 @@
 <template>
-    <div>
+  <div class="new-comment">
+    <div class="container">
       <h2 class="title"> New Comment: </h2>
 
       <!-- message -->
@@ -16,6 +17,7 @@
         </div>
       </form>
     </div>
+  </div>
 </template>
 
 <script>
@@ -41,30 +43,41 @@ export default {
 </script>
 
 <style lang="scss">
- form{
-  flex:1 1 40rem;
-  padding: 2rem;
+.new-comment form{
+  flex:1 1 50rem;
+  padding:2rem;
+  width: 600px;
   box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
   border-radius: .5rem;
 }
 
-form .inputBox{
-  padding:.5rem 0;
-}
+// .new-comment form .inputBox{
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// }
 
- form .inputBox input{
+.new-comment .container input,  .container textarea{
   width:100%;
+  width:100%;
+  margin:1rem 0;
   padding:1rem;
-  border:.1rem solid rgba(0,0,0,.1);
   font-size: 1.7rem;
   color:#333;
+  background:#eee;
   text-transform: none;
 }
+// .container input{
+//   width:100%;
+// }
+.new-comment .container textarea{
+  height: 15rem;
+  resize: none;
+  width:100%;
+}
 
-form .inputBox h3{
-  font-size: 2rem;
-  padding:1rem 0;
-  color:#666;
+.new-comment .controls {
+  text-align: center;
 }
 </style>
 
