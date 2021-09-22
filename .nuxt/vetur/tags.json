@@ -11,6 +11,12 @@
   "Promo": {
     "description": "Auto imported from components/Promo.vue"
   },
+  "AdminCommentTable": {
+    "description": "Auto imported from components/Admin/CommentTable.vue"
+  },
+  "AdminNewPostFrom": {
+    "description": "Auto imported from components/Admin/NewPostFrom.vue"
+  },
   "BlogPost": {
     "description": "Auto imported from components/Blog/Post.vue"
   },

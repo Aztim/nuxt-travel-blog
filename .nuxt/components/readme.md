@@ -10,6 +10,8 @@ You can directly use them in pages and other components without the need to impo
 - `<Footer>` | `<footer>` (components/Footer.vue)
 - `<Header>` | `<header>` (components/Header.vue)
 - `<Promo>` | `<promo>` (components/Promo.vue)
+- `<AdminCommentTable>` | `<admin-comment-table>` (components/Admin/CommentTable.vue)
+- `<AdminNewPostFrom>` | `<admin-new-post-from>` (components/Admin/NewPostFrom.vue)
 - `<BlogPost>` | `<blog-post>` (components/Blog/Post.vue)
 - `<BlogPostPreview>` | `<blog-post-preview>` (components/Blog/PostPreview.vue)
 - `<BlogPostsList>` | `<blog-posts-list>` (components/Blog/PostsList.vue)
