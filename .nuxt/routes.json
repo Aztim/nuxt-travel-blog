@@ -3,70 +3,60 @@
     "name": "about",
     "path": "/about",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/about/index.vue",
-    "chunkName": "pages/about/index",
-    "_name": "_3569f527"
+    "chunkName": "pages/about/index"
   },
   {
     "name": "admin",
     "path": "/admin",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/admin/index.vue",
-    "chunkName": "pages/admin/index",
-    "_name": "_426f8a69"
+    "chunkName": "pages/admin/index"
   },
   {
     "name": "blog",
     "path": "/blog",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/blog/index.vue",
-    "chunkName": "pages/blog/index",
-    "_name": "_1b8a2cc4"
+    "chunkName": "pages/blog/index"
   },
   {
     "name": "gallery",
     "path": "/gallery",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/gallery/index.vue",
-    "chunkName": "pages/gallery/index",
-    "_name": "_ee1f3a28"
+    "chunkName": "pages/gallery/index"
   },
   {
     "name": "admin-auth",
     "path": "/admin/auth",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/admin/auth/index.vue",
-    "chunkName": "pages/admin/auth/index",
-    "_name": "_daf4dbb8"
+    "chunkName": "pages/admin/auth/index"
   },
   {
     "name": "admin-comments",
     "path": "/admin/comments",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/admin/comments/index.vue",
-    "chunkName": "pages/admin/comments/index",
-    "_name": "_32340af0"
+    "chunkName": "pages/admin/comments/index"
   },
   {
     "name": "admin-new-post",
     "path": "/admin/new-post",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/admin/new-post/index.vue",
-    "chunkName": "pages/admin/new-post/index",
-    "_name": "_06ebee69"
+    "chunkName": "pages/admin/new-post/index"
   },
   {
     "name": "admin-postId",
     "path": "/admin/:postId",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/admin/_postId/index.vue",
-    "chunkName": "pages/admin/_postId/index",
-    "_name": "_0cbae694"
+    "chunkName": "pages/admin/_postId/index"
   },
   {
     "name": "blog-id",
     "path": "/blog/:id",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/blog/_id/index.vue",
-    "chunkName": "pages/blog/_id/index",
-    "_name": "_cfabf4ee"
+    "chunkName": "pages/blog/_id/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/home/tim/Рабочий стол/nuxt-travel-blog/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_65261469"
+    "chunkName": "pages/index"
   }
 ]
