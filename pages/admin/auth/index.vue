@@ -10,6 +10,19 @@
         </div>
 
       </form>
+
+      <!-- <form @submit.prevent="onSubmit">
+        <h3>login</h3>
+          <input type="email" class="box" placeholder="enter your email">
+          <input type="password" class="box" placeholder="enter your password">
+          <input type="submit" value="login now" class="btn">
+          <input type="checkbox" id="remember">
+          <label for="remember">remember me</label>
+        <p>forget password?
+          <a href="#">click here</a>
+        </p>
+        <p>don't have and account? <a href="#">register now</a></p>
+      </form> -->
     </div>
   </section>
 </template>
@@ -48,6 +61,7 @@ export default {
   height: 70vh;
   input {
     min-width: 460px;
+    background-color: darkgrey;
   }
 }
 </style>
