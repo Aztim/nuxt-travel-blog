@@ -22,6 +22,12 @@
 
 <script>
 export default {
+  props: {
+    postId: {
+      type: String,
+      required: true
+    }
+  },
   data () {
     return {
       message: null,
@@ -31,11 +37,11 @@ export default {
       }
     }
   },
- methods: {
+  methods: {
     onSubmit () {
       this.$store.dispatch('addComment', {
         postId: this.postId,
-        publish: false,
+        publish: true,
         ...this.comment
       })
         .then(()=>{

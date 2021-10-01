@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import commentTable from '@/components/Admin/CommentTable.vue'
 
 export default {
@@ -23,13 +24,25 @@ export default {
   layout: 'admin',
   data () {
     return {
-      comments: [
-        { id: 1, name: 'Alex', text: 'Lorem ipsum dolor sit amet, consectetur', status: true },
-        { id: 2, name: 'Evgenii', text: 'Lorem ipsum dolor sit amet, consectetur', status: false},
-      ]
+      comments: []
     }
   },
+  mounted() {
+    this.loadComments()
+  },
   methods: {
+     loadComments () {
+      axios
+        .get('https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments.json')
+          .then((res)=>{
+            let commentsArray = []
+            Object.keys(res.data).forEach(key => {
+              const comment = res.data[key]
+              commentsArray.push({ ...comment, id: key })
+            })
+            this.comments = commentsArray
+          })
+    },
     changeComment (id) {
       console.log(`Change comment id - ${id}`)
     },

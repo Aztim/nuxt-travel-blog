@@ -4,12 +4,13 @@
 
     <Post :post="post" />
     <Comments :comments="comments" />
-    <NewComment />
-
+    <NewComment :postId="$route.params.id" />
   </section>
 </template>
 
 <script>
+import axios from 'axios'
+
 import Post from '@/components/Blog/Post.vue'
 import Comments from '@/components/Comments/Comments.vue'
 import NewComment from '@/components/Comments/NewComment.vue'
@@ -17,22 +18,32 @@ import NewComment from '@/components/Comments/NewComment.vue'
 
 export default {
   components: { Post,Comments, NewComment },
+  async asyncData (context) {
+    let [post, comments] = await Promise.all([
+      axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts/${context.params.id}.json`),
+      axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments.json`)
+    ])
 
-  // data () {
-  //   return {
-  //     post: {
-  //       id: 1,
-  //       title: '1 post',
-  //       descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  //       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  //       img: 'https://lawnuk.com/wp-content/uploads/2016/08/sprogs-dogs.jpg'
-  //     },
-  //     comments: [
-  //       { name: 'Alex', text: 'Lorem ipsum dolor sit amet, consectetur' },
-  //       { name: 'John', text: 'Lorem ipsum dolor sit amet, consectetur' },
-  //     ]
-  //   }
-  // }
+    // Comments
+    let commentsArray = [],
+        commentsArrayRes = []
+
+    Object.keys(comments.data).forEach(key => {
+      commentsArray.push(comments.data[key])
+    })
+    for (let i=0; i < commentsArray.length; i++) {
+      if (commentsArray[i].postId === context.params.id && commentsArray[i].publish === true) {
+        commentsArrayRes.push(commentsArray[i])
+      }
+    }
+
+// let commentsArrayRes = Object.values(comments.data).filter(comment => (comment.postId === context.params.id) && comment.publish)
+    return {
+      post: post.data,
+      comments: commentsArrayRes
+    }
+
+  }
 }
 </script>
 
@@ -83,3 +94,4 @@ export default {
   }
 }
 </style>
+
