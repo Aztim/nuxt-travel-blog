@@ -2,6 +2,7 @@
   <div>
     <Intro title="My posts: "/>
     <PostsList :posts="postsLoaded" />
+    {{ postsLoaded }}
   </div>
 </template>
 

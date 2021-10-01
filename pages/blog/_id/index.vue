@@ -17,21 +17,22 @@ import NewComment from '@/components/Comments/NewComment.vue'
 
 export default {
   components: { Post,Comments, NewComment },
-  data () {
-    return {
-      post: {
-        id: 1,
-        title: '1 post',
-        descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        img: 'https://lawnuk.com/wp-content/uploads/2016/08/sprogs-dogs.jpg'
-      },
-      comments: [
-        { name: 'Alex', text: 'Lorem ipsum dolor sit amet, consectetur' },
-        { name: 'John', text: 'Lorem ipsum dolor sit amet, consectetur' },
-      ]
-    }
-  }
+
+  // data () {
+  //   return {
+  //     post: {
+  //       id: 1,
+  //       title: '1 post',
+  //       descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+  //       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+  //       img: 'https://lawnuk.com/wp-content/uploads/2016/08/sprogs-dogs.jpg'
+  //     },
+  //     comments: [
+  //       { name: 'Alex', text: 'Lorem ipsum dolor sit amet, consectetur' },
+  //       { name: 'John', text: 'Lorem ipsum dolor sit amet, consectetur' },
+  //     ]
+  //   }
+  // }
 }
 </script>
 
