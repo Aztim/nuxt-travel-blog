@@ -7,6 +7,7 @@
         <nuxt-link to="/admin" class="link linkWhite"> Admin </nuxt-link>
         <nuxt-link to="/admin/new-post" class="link linkWhite"> New Post </nuxt-link>
         <nuxt-link to="/admin/comments" class="link linkWhite"> Comments </nuxt-link>
+        <span @click="logoutUser" class="link linkWhite" >Logout </span>
       </Intro>
       <nuxt />
     </div>
@@ -18,7 +19,15 @@ import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 export default {
   components: { Header,Footer  },
-  middleware: ['auth']
+  middleware: ['auth'],
+  methods: {
+    logoutUser () {
+      this.$store.dispatch('logoutUser')
+        .then(() => {
+          this.$router.push('/')
+        })
+    }
+  }
 }
 </script>
 
