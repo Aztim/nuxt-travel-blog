@@ -18,12 +18,18 @@
     </div>
 
     <div class="icons">
-      <i class="fas fa-user"
-        id="login-btn"
-        @click="$emit('openAuthWindow')">
-      </i>
-    </div>
+      <nuxt-link to="/admin" v-if="checkAuthUser">
+        <i
+          class="fas fa-tools"
+          id="admin-tools"
+        ></i>
+      </nuxt-link>
 
+      <i v-else
+        class="fas fa-user"
+        id="login-btn"
+        @click="$emit('openAuthWindow')"></i>
+    </div>
   </header>
 </template>
 
@@ -34,9 +40,15 @@ export default {
     return {
       isOpen: false,
       links: [
+        { title: 'Blog', url: '/blog' },
         { title: 'Gallery', url: '/gallery' },
         { title: 'About', url: '/about' }
       ]
+    }
+  },
+  computed: {
+    checkAuthUser () {
+      return this.$store.getters.checkAuthUser
     }
   },
   methods: {
