@@ -14,7 +14,8 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:"stylesheet", href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap'},
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'}
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'},
+      // { rel: "stylesheet", href: "https://unpkg.com/swiper@7/swiper-bundle.min.css" }
     ]
   },
 
@@ -33,7 +34,7 @@ export default {
   ],
 
   script:[
-    // {src: "https://kit.fontawesome.com/4d36f93e30.js", crossorigin: "anonymous"},
+    // {src: "https://unpkg.com/swiper@7/swiper-bundle.min.js", crossorigin: "anonymous"}
   ],
 
 

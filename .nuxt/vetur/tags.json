@@ -1,4 +1,7 @@
 {
+  "Brands": {
+    "description": "Auto imported from components/Brands.vue"
+  },
   "Contacts": {
     "description": "Auto imported from components/Contacts.vue"
   },

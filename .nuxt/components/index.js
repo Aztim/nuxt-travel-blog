@@ -1,3 +1,4 @@
+export { default as Brands } from '../../components/Brands.vue'
 export { default as Contacts } from '../../components/Contacts.vue'
 export { default as Footer } from '../../components/Footer.vue'
 export { default as Header } from '../../components/Header.vue'

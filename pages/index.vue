@@ -4,16 +4,19 @@
     <Intro title="My latest posts:"/>
     <PostsList :posts="postsLoaded" />
     <Contacts/>
+    <Brands/>
   </div>
 </template>
 
 <script>
 import Promo from '@/components/Promo.vue'
 import Contacts from '@/components/Contacts.vue'
+import Brands from '@/components/Brands.vue'
 export default {
   components : {
     Promo,
-    Contacts
+    Contacts,
+    Brands
   },
   computed: {
     postsLoaded () {
