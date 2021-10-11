@@ -4,7 +4,9 @@
       <PostPreview
         v-for="post in posts" :key="post.id"
         :admin="admin"
-        :post="post" />
+        :post="post"
+        :img_height="25"
+        />
     </div>
   </section>
 </template>

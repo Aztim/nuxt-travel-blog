@@ -1,8 +1,9 @@
 <template>
   <nuxt-link :to="getLink" class="box">
-    <img :src="post.img" :alt="post.title">
+    <img :src="post.img" :alt="post.title" :style="`height:${img_height}rem`">
+    <!-- :style="`height:${img_height}rem`" -->
     <div class="content">
-      <h3><i class="fas fa-map-marker-alt"></i>{{ post.title }}</h3>
+      <h3>{{ post.title }}</h3>
       <p>{{ post.descr }}</p>
     </div>
   </nuxt-link>
@@ -17,6 +18,10 @@ export default {
     },
     admin: {
       type: Boolean,
+      default: false
+    },
+    img_height: {
+      type: Number,
       default: false
     }
   },
