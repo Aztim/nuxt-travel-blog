@@ -9,14 +9,10 @@
             <div class="post-image">
               <div>
                   <img :src="post.img" class="img" alt="blog1" style="height: 600px;">
-                     <!-- <PostPreview
-                      :post="post"
-                      :img_height="700"
-                      /> -->
               </div>
               <div class="post-info flex-row">
                   <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                  <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14, 2019</span>
+                  <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;{{ post.updatedDate | date }}</span>
                   <span>2 Comments</span>
               </div>
             </div>
@@ -29,18 +25,32 @@
                   nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
                   illum similique veniam tempore unde?
               </p>
-              <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+              <nuxt-link :to="`/blog/${post.id}`">
+                <button class="btn post-btn">
+                  Read More &nbsp; <i class="fas fa-arrow-right"></i>
+                </button>
+              </nuxt-link>
             </div>
           </div>
           <hr>
 
-          <div class="pagination flex-row">
-            <a href="#"><i class="fas fa-chevron-left"></i></a>
-            <a href="#" class="pages">1</a>
-            <a href="#" class="pages">2</a>
-            <a href="#" class="pages">3</a>
-            <a href="#"><i class="fas fa-chevron-right"></i></a>
-          </div>
+          <!-- <Pagination
+            :total="postsLoaded.length"
+            :limit="limit"
+            :url="baseUrl"
+            :current-page="currentPage"
+          /> -->
+
+          <!-- <paginate
+            :page-count="10"
+            :click-handler="pageChangeHandler"
+            :prev-text="'Prev'"
+            :next-text="'Next'"
+            :container-class="'pagination'"
+            :page-class="'page-item'"
+            >
+          </paginate> -->
+
         </div>
 
       </div>
@@ -49,17 +59,45 @@
 </template>
 
 <script>
+// import Paginate from 'vuejs-paginate'
 import aosMixin from '~/mixin/aos'
-// import PostPreview from '@/components/Blog/PostPreview.vue'
+// import paginationMixin from '~/mixin/pagination.mixin'
+// import {limit} from '~/mixin/vars'
+// import Pagination from '@/components/UI/Pagination.vue'
 export default {
  data () {
-    return {}
+    return {
+    }
   },
-//   components: { PostPreview },
+  // components: { Paginate },
   computed: {
     postsLoaded () {
-      return this.$store.getters.getPostsLoaded
+      return  this.$store.getters.getPostsLoaded
     }
+
+  //   limit() {
+  //     return limit
+  //   },
+  //   baseUrl() {
+  //     return this.$route.path
+  //   },
+  //   currentPage() {
+  //     console.log(this.$route)
+  //     return Number(this.$route.query.page || '1')
+  //   },
+  //   offset() {
+  //     return this.currentPage * limit - limit
+  //   }
+  // },
+  // watch: {
+  //   currentPage() {
+  //     this.fetchFeed()
+  //   },
+  //   apiUrl() {
+  //     this.fetchFeed()
+  //   }
+  },
+  methods: {
   },
   mixins: [aosMixin]
 }
@@ -119,14 +157,18 @@ export default {
   padding: .7rem 1.5rem;
 }
 
+/* /!!!!!!!!!!!!!/ */
 .pagination{
     display: flex;
     justify-content: center;
+    /* justify-content: space-between; */
+    list-style-type:none;
     color: #3f4954;
     margin: 4rem 0;
 }
 
-.pagination a{
+/* .pagination li a{
+
     padding: .6rem .9rem;
     border-radius: 2rem;
     margin: 0 .3rem;
@@ -136,7 +178,9 @@ export default {
 .pagination .pages{
     background: #3f4954;
     color: #ffffff;
-}
+} */
+
+
 
 /* -------x-------- Site Content --------x-------*/
 

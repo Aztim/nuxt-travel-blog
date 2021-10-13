@@ -42,6 +42,7 @@ export default {
   },
   methods: {
     onSubmit () {
+        console.log(this.use)
       this.$store.dispatch('authUser', this.user)
         .then((res) => {
           this.$router.push('/admin')

@@ -1,11 +1,11 @@
 <template>
-  <newPostFrom @submit="onSubmit" />
+  <newPostForm @submit="onSubmit" />
 </template>
 
 <script>
-import newPostFrom from '@/components/Admin/NewPostFrom.vue'
+import newPostForm from '~/components/Admin/NewPostForm.vue'
 export default {
-  components: { newPostFrom },
+  components: { newPostForm },
   layout: 'admin',
   methods: {
     onSubmit (post) {

@@ -1,5 +1,5 @@
 <template>
-  <newPostFrom
+  <newPostForm
     :postEdit="post"
     @submit="onSubmit"
   />
@@ -8,9 +8,9 @@
 <script>
 import axios from 'axios'
 
-import newPostFrom from '@/components/Admin/NewPostFrom.vue'
+import NewPostForm from '~/components/Admin/NewPostForm.vue'
 export default {
-  components: { newPostFrom },
+  components: { NewPostForm },
   layout: 'admin',
   asyncData (contex) {
     return axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts/${contex.params.postId}.json`)

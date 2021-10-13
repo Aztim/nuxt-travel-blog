@@ -5,6 +5,10 @@
       <div class="post-header">
         <img :src="post.img" :alt="post.title">
         <h1 class="title"> {{ post.title }} </h1>
+
+        <div class="post-details">
+          {{ post.updatedDate | date }}
+        </div>
         <p>{{ post.descr }}</p>
       </div>
 

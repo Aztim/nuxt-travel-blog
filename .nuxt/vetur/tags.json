@@ -17,8 +17,8 @@
   "AdminCommentTable": {
     "description": "Auto imported from components/Admin/CommentTable.vue"
   },
-  "AdminNewPostFrom": {
-    "description": "Auto imported from components/Admin/NewPostFrom.vue"
+  "AdminNewPostForm": {
+    "description": "Auto imported from components/Admin/NewPostForm.vue"
   },
   "BlogPost": {
     "description": "Auto imported from components/Blog/Post.vue"
@@ -52,6 +52,9 @@
   },
   "UIControlsInput": {
     "description": "Auto imported from components/UI/Controls/Input.vue"
+  },
+  "UIControlsPagination": {
+    "description": "Auto imported from components/UI/Controls/Pagination.vue"
   },
   "UIControlsTextArea": {
     "description": "Auto imported from components/UI/Controls/TextArea.vue"

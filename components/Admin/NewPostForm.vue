@@ -2,13 +2,14 @@
   <section class="new-post">
     <div class="container">
       <form @submit.prevent="onSubmit">
+         <AppInput v-model="post.author" holder="author"></AppInput>
         <AppInput v-model="post.title" holder="title">  </AppInput>
-        <AppInput v-model="post.descr" holder="descr"></AppInput>
         <AppInput v-model="post.img" holder="img"></AppInput>
         <AppTextArea v-model="post.content" holder="content"></AppTextArea>
+
         <!-- buttons -->
         <div class="controls">
-          <div class="btn btnDanger" @click="cancel"> Cancel </div>
+          <div class="btn btnDanger" @click="onCancel"> Cancel </div>
           <AppButton > Save </AppButton>
         </div>
       </form>
@@ -27,8 +28,8 @@ export default {
   data () {
     return {
       post: this.postEdit ? { ...this.postEdit } : {
+        author: '',
         title: '',
-        descr: '',
         img: '',
         content: ''
       }
@@ -38,7 +39,7 @@ export default {
     onSubmit () {
       this.$emit('submit', this.post)
     },
-    cancel () {
+    onCancel () {
       this.$router.push('/admin/')
     }
   }

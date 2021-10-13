@@ -15,6 +15,7 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_b852e702 from 'nuxt_plugin_plugin_b852e702' // Source: ./components/plugin.js (mode: 'all')
 import nuxt_plugin_appcomponents_4436d504 from 'nuxt_plugin_appcomponents_4436d504' // Source: ../plugins/app-components.js (mode: 'all')
+import nuxt_plugin_datefilter_f4b26092 from 'nuxt_plugin_datefilter_f4b26092' // Source: ../plugins/date-filter.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -82,7 +83,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"nuxt-hotel-app","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Nunito:wght@200;300;400;600;700&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F5.15.3\u002Fcss\u002Fall.min.css"}],"style":[],"script":[]},
+    head: {"title":"nuxt-travel-blog","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Travel-blog"},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Nunito:wght@200;300;400;600;700&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F5.15.3\u002Fcss\u002Fall.min.css"}],"style":[],"script":[]},
 
     store,
     router,
@@ -217,6 +218,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_appcomponents_4436d504 === 'function') {
     await nuxt_plugin_appcomponents_4436d504(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_datefilter_f4b26092 === 'function') {
+    await nuxt_plugin_datefilter_f4b26092(app.context, inject)
   }
 
   // Lock enablePreview in context

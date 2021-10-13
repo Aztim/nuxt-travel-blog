@@ -43,7 +43,7 @@ export const actions = {
   },
 
   authUser ({commit}, authData) {
-    const key = 'AIzaSyCLdHK--LIaJzh6NZBtM7SPRLJrAq2I7HA'
+    const key = process.env.fbAPIKey
     return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${key}`, {
       email: authData.email,
       password: authData.password,
@@ -83,11 +83,15 @@ export const actions = {
   },
 
   addPost ({commit}, post) {
-    return axios.post('https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts.json', post)
+    const createdPost = {
+      ...post,
+      updatedDate: new Date()
+    }
+    return axios.post('https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts.json', createdPost)
 
       .then(res => {
-        console.log({...post, id: res.data.name })
-        commit('addPost', { ...post, id: res.data.name })
+        // console.log({...post, id: res.data.name })
+        commit('addPost', { ...createdPost, id: res.data.name })
       })
       .catch(e => console.log(e))
   },

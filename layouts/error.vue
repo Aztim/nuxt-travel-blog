@@ -3,7 +3,8 @@
     <div class="container">
       <div class="not-found__wrapper">
         <p class="title">Page Not Found</p>
-        <nuxt-link to="/"> Back to main page </nuxt-link>
+        Back to <a href="/">main page</a>
+        <!-- <nuxt-link to="/"> Back to main page </nuxt-link> -->
       </div>
     </div>
   </section>
@@ -17,5 +18,11 @@
   flex-direction: column;
   width: 100%;
   height: 90vh;
+  font-weight: bold;
+  color: red;
+}
+
+p {
+
 }
 </style>
