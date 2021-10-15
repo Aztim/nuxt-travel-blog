@@ -4,13 +4,15 @@
       <form @submit.prevent="onSubmit">
          <AppInput v-model="post.author" holder="author"></AppInput>
         <AppInput v-model="post.title" holder="title">  </AppInput>
-        <AppInput v-model="post.img" holder="img"></AppInput>
+        <!-- <AppInput  v-model="post.img" type="file" holder="img"></AppInput> -->
+        <input type="file"  @change="handleChange">
         <AppTextArea v-model="post.content" holder="content"></AppTextArea>
 
         <!-- buttons -->
         <div class="controls">
           <div class="btn btnDanger" @click="onCancel"> Cancel </div>
           <AppButton > Save </AppButton>
+          <AppButton > {{file}} </AppButton>
         </div>
       </form>
     </div>
@@ -31,8 +33,11 @@ export default {
         author: '',
         title: '',
         img: '',
+        file: '',
         content: ''
-      }
+      },
+      file: null,
+      types: ['image/png', 'image/jpeg', 'image/jpg']
     }
   },
   methods: {
@@ -41,6 +46,19 @@ export default {
     },
     onCancel () {
       this.$router.push('/admin/')
+    },
+    handleChange (e) {
+      const selected = e.target.files[0]
+
+      if (selected && this.types.includes(selected.type)) {
+          this.file = selected
+
+          // fileError.value = null
+      }
+      // else {
+      //     file.value = null
+      //     fileError.value = 'Please, select an image file (png or jpeg)'
+      // }
     }
   }
 }

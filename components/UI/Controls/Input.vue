@@ -29,6 +29,11 @@ export default {
       type: Boolean,
       default: true
     }
+  },
+  methods: {
+      handleChange () {
+        alert('!!!!')
+      }
   }
 }
 </script>

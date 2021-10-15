@@ -3,6 +3,7 @@ import Cookie from 'js-cookie'
 
 export const state = () => ({
   postsLoaded: [],
+  commentsLoaded: [],
   token: null
 })
 
@@ -16,6 +17,10 @@ export const mutations = {
   editPost (state, postEdit) {
     const postIndex = state.postsLoaded.findIndex(post => post.id === postEdit.id)
     state.postsLoaded[postIndex] = postEdit
+  },
+
+  addComment (state, comment) {
+    state.commentsLoaded.push(comment)
   },
 
   setToken (state, token) {
@@ -103,8 +108,11 @@ export const actions = {
       })
       .catch(e => console.log(e))
   },
-  addComment (comment) {
+  addComment ({commit}, comment) {
     return axios.post('https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments.json', comment)
+      .then(res => {
+        commit('addComment', {...comment, id: res.data.name})
+      })
       .catch(e => console.log(e))
   }
 }

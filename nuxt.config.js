@@ -62,6 +62,7 @@ export default {
   build: {
 
   },
+  // Firebase key
   env: {
     fbAPIKey: 'AIzaSyCLdHK--LIaJzh6NZBtM7SPRLJrAq2I7HA'
   }

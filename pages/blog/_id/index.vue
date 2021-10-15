@@ -1,7 +1,6 @@
 <template>
   <section class="post_id" id="post_id">
     <Intro title="Post"/>
-
     <Post :post="post" />
     <Comments :comments="comments" />
     <NewComment :postId="$route.params.id" />
@@ -23,12 +22,12 @@ export default {
       axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts/${context.params.id}.json`),
       axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments.json`)
     ])
-
     // Comments
     let commentsArray = [],
         commentsArrayRes = []
 
     Object.keys(comments.data).forEach(key => {
+
       commentsArray.push(comments.data[key])
     })
     for (let i=0; i < commentsArray.length; i++) {
@@ -82,16 +81,17 @@ export default {
   margin: 30px 0;
   text-align: center;
 }
-.comment {
-  padding: 20px;
-  width: 600px;
-  margin-bottom: 20px;
-  background-color: #eee;
-  .name {
-    margin-bottom: 12px;
-    font-size: 24px;
-    color: #5c4de7;
-  }
-}
+// .comment {
+//   padding: 20px;
+//   width: 600px;
+//   margin-bottom: 20px;
+//   background-color: #eee;
+//   .name {
+//     margin-bottom: 12px;
+//     font-size: 24px;
+//     color: #5c4de7;
+//   }
+// }
+
 </style>
 

@@ -44,7 +44,6 @@ export default {
           })
     },
     changeComment (comment) {
-      console.log(comment)
         comment.publish = !comment.publish
         axios
           .put(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments/${comment.id}.json`, comment)
