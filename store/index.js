@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Cookie from 'js-cookie'
+import {app, getStorage, ref, uploadBytesResumable, getDownloadURL } from '~/plugins/firebase'
 
 export const state = () => ({
   postsLoaded: [],
@@ -40,10 +41,10 @@ export const actions = {
         for (let key in res.data) {
           postsArray.push( { ...res.data[key], id: key } )
         }
-        // console.log(postsArray)
-        // Res
+
         commit('setPosts', postsArray)
       })
+
       .catch(e => console.log(e))
   },
 
@@ -87,7 +88,32 @@ export const actions = {
     Cookie.remove('jwt')
   },
 
+  uploadImage ({commit}, file) {
+    const storage = getStorage();
+
+    const metadata = {
+      contentType: file.type
+    };
+    const storageRef = ref(storage, 'images/' + file.name);
+    const uploadTask = uploadBytesResumable(storageRef, file, metadata);
+    let url = null
+
+    uploadTask.on('state_changed', (snapshot) => { console.log('Uploaded!'),
+      (error) => {
+        console.log(error)
+      }
+    })
+
+    return getDownloadURL(uploadTask.snapshot.ref)
+      .then((downloadURL) => {
+        console.log('File available at', downloadURL);
+      return  url = downloadURL
+    })
+  },
+
   addPost ({commit}, post) {
+    console.log(post)
+
     const createdPost = {
       ...post,
       updatedDate: new Date()
@@ -95,7 +121,6 @@ export const actions = {
     return axios.post('https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts.json', createdPost)
 
       .then(res => {
-        // console.log({...post, id: res.data.name })
         commit('addPost', { ...createdPost, id: res.data.name })
       })
       .catch(e => console.log(e))
@@ -123,5 +148,11 @@ export const getters = {
   },
   checkAuthUser (state) {
     return state.token != null
+  },
+  getCommentsLength (state) {
+    return
+  },
+  commentsLoaded (state) {
+    return state.commentsLoaded
   }
 }

@@ -8,12 +8,12 @@
           <div class="post-content" v-for="post in postsLoaded" :key="post.id" data-aos="zoom-in" data-aos-delay="200">
             <div class="post-image">
               <div>
-                  <img :src="post.img" class="img" alt="blog1" style="height: 600px;">
+                  <img :src="post.filePath" class="img" alt="blog1" style="height: 600px;">
               </div>
-              <div class="post-info flex-row">
+              <div class="post-info flex-row" >
                   <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
                   <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;{{ post.updatedDate | date }}</span>
-                  <span>2 Comments</span>
+                  <span >{{ commentsLength(post.id, commentsArray) }}</span>
               </div>
             </div>
 
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 // import Paginate from 'vuejs-paginate'
 import aosMixin from '~/mixin/aos'
 // import paginationMixin from '~/mixin/pagination.mixin'
@@ -67,13 +68,27 @@ import aosMixin from '~/mixin/aos'
 export default {
  data () {
     return {
+      number: 0
     }
   },
+  async asyncData () {
+    let comments = await axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments.json`)
+
+    let commentsArray = comments.data
+     return {
+      commentsArray
+    }
+
+    },
+  // },
   // components: { Paginate },
   computed: {
     postsLoaded () {
       return  this.$store.getters.getPostsLoaded
     }
+    // commentsLength () {
+    //   this.$store.getters.getCommentsLength
+    // }
 
   //   limit() {
   //     return limit
@@ -98,6 +113,15 @@ export default {
   //   }
   },
   methods: {
+    commentsLength(post, ret) {
+      let num = 0
+      for(let i in ret) {
+        if (ret[i].postId === post) {
+          num++
+        }
+      }
+      return num
+    }
   },
   mixins: [aosMixin]
 }

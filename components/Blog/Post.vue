@@ -1,7 +1,7 @@
 <template>
   <section >
       <div class="post-header">
-        <img :src="post.img" :alt="post.title">
+        <img :src="post.filePath" :alt="post.title">
         <h1 class="title"> {{ post.title }} </h1>
 
         <div class="post-details">

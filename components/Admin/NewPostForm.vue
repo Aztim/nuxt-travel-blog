@@ -12,7 +12,6 @@
         <div class="controls">
           <div class="btn btnDanger" @click="onCancel"> Cancel </div>
           <AppButton > Save </AppButton>
-          <AppButton > {{file}} </AppButton>
         </div>
       </form>
     </div>
@@ -33,27 +32,31 @@ export default {
         author: '',
         title: '',
         img: '',
-        file: '',
         content: ''
       },
-      file: null,
+      imageUrl: '',
       types: ['image/png', 'image/jpeg', 'image/jpg']
     }
   },
   methods: {
     onSubmit () {
-      this.$emit('submit', this.post)
+      if (this.file) {
+        return this.$store.dispatch('uploadImage', this.file)
+        .then(res => {
+        this.post.filePath = res
+        this.$emit('submit', this.post)
+        })
+      }
     },
     onCancel () {
       this.$router.push('/admin/')
     },
+
     handleChange (e) {
       const selected = e.target.files[0]
 
       if (selected && this.types.includes(selected.type)) {
-          this.file = selected
-
-          // fileError.value = null
+        this.file = selected
       }
       // else {
       //     file.value = null
