@@ -22,11 +22,15 @@ export default {
       axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts/${context.params.id}.json`),
       axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments.json`)
     ])
-    // Comments
+
     let commentsArray = [],
         commentsArrayRes = []
+    // Comments
+    if(comments.data !== null) {
+      // console.log(comments.data)
 
-    Object.keys(comments.data).forEach(key => {
+
+          Object.keys(comments.data).forEach(key => {
 
       commentsArray.push(comments.data[key])
     })
@@ -36,7 +40,12 @@ export default {
       }
     }
 
-// let commentsArrayRes = Object.values(comments.data).filter(comment => (comment.postId === context.params.id) && comment.publish)
+      // let commentsArrayRes = Object.values(comments.data).filter(comment => (comment.postId === context.params.id) && comment.publish)
+    }
+
+    console.log(commentsArrayRes)
+
+
     return {
       post: post.data,
       comments: commentsArrayRes

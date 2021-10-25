@@ -7,7 +7,7 @@
         <nuxt-link to="/admin" class="link linkWhite"> Admin </nuxt-link>
         <nuxt-link to="/admin/new-post" class="link linkWhite"> New Post </nuxt-link>
         <nuxt-link to="/admin/comments" class="link linkWhite"> Comments </nuxt-link>
-        <span @click="logoutUser" class="link linkWhite" >Logout </span>
+        <span @click="logoutUser"  ><i class="fas fa-sign-out-alt"></i></span>
       </Intro>
       <nuxt />
     </div>

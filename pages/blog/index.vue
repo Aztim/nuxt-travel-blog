@@ -11,7 +11,7 @@
                   <img :src="post.filePath" class="img" alt="blog1" style="height: 600px;">
               </div>
               <div class="post-info flex-row" >
-                  <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
+                  <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin {{ post.author}}</span>
                   <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;{{ post.updatedDate | date }}</span>
                   <span >{{ commentsLength(post.id, commentsArray) }}</span>
               </div>
@@ -73,7 +73,6 @@ export default {
   },
   async asyncData () {
     let comments = await axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/comments.json`)
-
     let commentsArray = comments.data
      return {
       commentsArray

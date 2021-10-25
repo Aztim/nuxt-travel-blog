@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="getLink" class="box">
-    <img :src="post.img" :alt="post.title" :style="`height:${img_height}rem`">
+    <img :src="post.filePath" :alt="post.title" :style="`height:${img_height}rem`">
     <!-- :style="`height:${img_height}rem`" -->
     <div class="content">
       <h3>{{ post.title }}</h3>

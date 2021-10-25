@@ -88,39 +88,49 @@ export const actions = {
     Cookie.remove('jwt')
   },
 
-  uploadImage ({commit}, file) {
-    const storage = getStorage();
+  async uploadImage ({commit}, file) {
 
-    const metadata = {
-      contentType: file.type
-    };
-    const storageRef = ref(storage, 'images/' + file.name);
-    const uploadTask = uploadBytesResumable(storageRef, file, metadata);
+    const storage = getStorage();
+    console.log(storage)
     let url = null
 
-    uploadTask.on('state_changed', (snapshot) => { console.log('Uploaded!'),
-      (error) => {
-        console.log(error)
-      }
-    })
+    async function uploadTaskPromise() {
+      return new Promise(function(resolve, reject) {
+        const metadata = { contentType: 'image/png' };
+        const storageRef = ref(storage, 'images/' + file.name);
+        const uploadTask = uploadBytesResumable(storageRef, file, metadata);
 
-    return getDownloadURL(uploadTask.snapshot.ref)
-      .then((downloadURL) => {
-        console.log('File available at', downloadURL);
-      return  url = downloadURL
-    })
+        uploadTask.on('state_changed', function(snapshot) {
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log('Upload is ' + progress + '% done');
+          },
+          function error (err) {
+            console.log('error', err)
+            reject()
+          },
+          function complete() {
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+              resolve(downloadURL)
+              console.log('File available at', downloadURL);
+            })
+          }
+        )
+      })
+    }
+
+    const storageUrl = await uploadTaskPromise()
+    return url = storageUrl
   },
 
   addPost ({commit}, post) {
-    console.log(post)
-
     const createdPost = {
       ...post,
       updatedDate: new Date()
     }
-    return axios.post('https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts.json', createdPost)
 
+    return axios.post('https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts.json', createdPost)
       .then(res => {
+        // console.log({...post, id: res.data.name })
         commit('addPost', { ...createdPost, id: res.data.name })
       })
       .catch(e => console.log(e))
@@ -156,3 +166,16 @@ export const getters = {
     return state.commentsLoaded
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

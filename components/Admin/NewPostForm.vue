@@ -31,21 +31,24 @@ export default {
       post: this.postEdit ? { ...this.postEdit } : {
         author: '',
         title: '',
-        img: '',
+        imageUrl: '',
         content: ''
       },
-      imageUrl: '',
+
       types: ['image/png', 'image/jpeg', 'image/jpg']
     }
   },
   methods: {
-    onSubmit () {
+     onSubmit () {
       if (this.file) {
-        return this.$store.dispatch('uploadImage', this.file)
-        .then(res => {
-        this.post.filePath = res
+         return this.$store.dispatch('uploadImage', this.file)
+          .then(res => {
+            this.post.filePath = res
+            this.$emit('submit', this.post)
+          })
+      }
+      else {
         this.$emit('submit', this.post)
-        })
       }
     },
     onCancel () {
