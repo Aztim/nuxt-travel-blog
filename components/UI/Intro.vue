@@ -17,17 +17,10 @@ export default {
     }
   },
   data () {
-    return {
-      // letters: []
-    }
+    return {}
   }
-  // mounted () {
-  //   this.letters = this.title.replace(/\s/g, '').split("")
-  //   this.letters = this.title.split("")
-  // }
 }
 </script>
 
 <style lang="scss">
-
 </style>

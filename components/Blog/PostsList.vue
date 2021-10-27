@@ -28,11 +28,27 @@ export default {
 }
 </script>
 
-<style >
+<style lang="scss">
 .box-container{
   display: flex;
   flex-wrap: wrap;
   gap:2rem;
+
+  .box{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    }
+
+  .box img{
+    /* height: 25rem; */
+    width:100%;
+    object-fit: cover;
+  }
 }
+
+
+
 
 </style>

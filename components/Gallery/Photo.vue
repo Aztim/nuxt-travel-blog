@@ -1,11 +1,11 @@
 <template>
   <div class="image" @click="showPopupImage">
     <img :src="photo.img" :alt="photo.title">
-
+<!--
     <div class="content">
       <h3><i class="fas fa-map-marker-alt"></i>{{ photo.title }}</h3>
       <p></p>
-    </div>
+    </div> -->
   </div>
 </template>
 

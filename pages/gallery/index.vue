@@ -65,12 +65,6 @@ export default {
           descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
           img: require('~/assets/images/gallery/g-9.jpg')
         }
-        // {
-        //   id: 10,
-        //   title: '10 post',
-        //   descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        //   img: require('~/assets/images/gallery/g-10.jpg')
-        // }
       ]
     }
   }
@@ -78,5 +72,4 @@ export default {
 </script>
 
 <style lang="scss" >
-
 </style>

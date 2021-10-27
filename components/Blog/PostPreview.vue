@@ -4,7 +4,7 @@
     <!-- :style="`height:${img_height}rem`" -->
     <div class="content">
       <h3>{{ post.title }}</h3>
-      <p>{{ post.descr }}</p>
+      <p>{{ post.content }}</p>
     </div>
   </nuxt-link>
 </template>

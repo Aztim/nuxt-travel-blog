@@ -7,8 +7,6 @@
         <img src="~/assets/images/contact-img.svg" alt="">
       </div>
 
-      <!-- <Message v-if="message" :message="message" /> -->
-
       <form action="" @submit.prevent="onSubmit">
         <!-- <Message v-if="message" :message="message" /> -->
         <div class="inputBox">
@@ -60,45 +58,48 @@ export default {
   flex-wrap: wrap;
   gap:1.5rem;
   align-items: center;
-}
 
-.contact .row .image{
-  flex:1 1 35rem;
-}
+  .image{
+    flex:1 1 35rem;
 
-.contact .row .image img{
-  width:100%;
-}
+    img{
+      width:100%;
+    }
+  }
 
-.contact .row form{
-  flex:1 1 50rem;
-  padding:2rem;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-  border-radius: .5rem;
-}
+  form{
+    flex:1 1 50rem;
+    padding:2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
 
-.contact .row form .inputBox{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+    .inputBox{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-.contact .row form .inputBox input,.subjectBox input,  .contact .row form textarea{
-  width:49%;
-  margin:1rem 0;
-  padding:1rem;
-  font-size: 1.7rem;
-  color:#333;
-  background:#f7f7f7;
-  text-transform: none;
-}
-.subjectBox input{
-  width:100%;
-}
-.contact .row form textarea{
-  height: 15rem;
-  resize: none;
-  width:100%;
+
+    .inputBox input, .subjectBox input, textarea{
+      width:49%;
+      margin:1rem 0;
+      padding:1rem;
+      font-size: 1.7rem;
+      color:#333;
+      background:#f7f7f7;
+      text-transform: none;
+    }
+
+    .subjectBox input{
+      width:100%;
+    }
+
+    textarea{
+      height: 15rem;
+      resize: none;
+      width:100%;
+    }
+  }
 }
 </style>
 

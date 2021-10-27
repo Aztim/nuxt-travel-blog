@@ -32,27 +32,28 @@ export default {
       images: [
         {
           id: 1,
-          imageUrl: require("../assets/images/brands/1.jpg")
+          // imageUrl: require("~/static/img/brands/1.jpg")
+          imageUrl: require("~/static/img/brands/1.jpg")
         },
         {
           id: 2,
-          imageUrl: require("../assets/images/brands/2.jpg")
+          imageUrl: require("~/static/img/brands/2.jpg")
         },
         {
           id: 3,
-           imageUrl: require("../assets/images/brands/3.jpg")
+           imageUrl: require("~/static/img/brands/3.jpg")
         },
         {
           id: 4,
-           imageUrl: require("../assets/images/brands/4.jpg")
+           imageUrl: require("~/static/img/brands/4.jpg")
         },
         {
           id: 5,
-           imageUrl: require("../assets/images/brands/5.jpg")
+           imageUrl: require("~/static/img/brands/5.jpg")
         },
         {
           id: 6,
-           imageUrl: require("../assets/images/brands/6.jpg")
+           imageUrl: require("~/static/img/brands/6.jpg")
         },
       ],
        settings:

@@ -129,7 +129,7 @@ export const actions = {
     }
 
     return axios.post('https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts.json', createdPost)
-      .then(res => {
+    .then(res => {
         // console.log({...post, id: res.data.name })
         commit('addPost', { ...createdPost, id: res.data.name })
       })

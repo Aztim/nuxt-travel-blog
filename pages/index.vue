@@ -12,6 +12,7 @@
 import Promo from '@/components/Promo.vue'
 import Contacts from '@/components/Contacts.vue'
 import Brands from '@/components/Brands.vue'
+
 export default {
   components : {
     Promo,
