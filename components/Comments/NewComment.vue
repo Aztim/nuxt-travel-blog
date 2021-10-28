@@ -11,7 +11,7 @@
       :holder="'Type a message and hit enter to send...'"
     >
     </AppTextArea>
-    <!-- <div class="error">{{ message}}</div> -->
+    <Message v-if="message" :message="message" />
     <!-- <AppButton type="submit">Submit</AppButton> -->
   </form>
 </template>
@@ -38,12 +38,12 @@ export default {
     handleSubmit() {
       this.$store.dispatch('addComment', {
         postId: this.postId,
-        publish: true,
+        publish: false,
         createdAt: new Date(),
         ...this.comment
       })
         .then(()=>{
-          this.message = "Submited!"
+          this.message = "The comment will be posted after my checking"
           // Reset
           this.comment.name = ''
           this.comment.text = ''
@@ -73,5 +73,8 @@ export default {
 
   input {
     background: #fafafa;;
+  }
+  .message {
+    text-align: center;
   }
 </style>
