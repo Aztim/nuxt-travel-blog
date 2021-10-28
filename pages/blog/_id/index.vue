@@ -1,9 +1,11 @@
 <template>
   <section class="post_id" id="post_id">
     <Intro title="Post"/>
-    <Post :post="post" />
-    <Comments :comments="comments" />
-    <NewComment :postId="$route.params.id" />
+    <div class="container">
+      <Post :post="post" />
+      <Comments :comments="comments" />
+      <NewComment :postId="$route.params.id" />
+    </div>
   </section>
 </template>
 
@@ -28,10 +30,7 @@ export default {
     // Comments
     if(comments.data !== null) {
       // console.log(comments.data)
-
-
-          Object.keys(comments.data).forEach(key => {
-
+      Object.keys(comments.data).forEach(key => {
       commentsArray.push(comments.data[key])
     })
     for (let i=0; i < commentsArray.length; i++) {
@@ -45,7 +44,6 @@ export default {
 
     console.log(commentsArrayRes)
 
-
     return {
       post: post.data,
       comments: commentsArrayRes
@@ -55,52 +53,18 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post_id .heading {
   margin-top: 100px;
 }
 
-
-.post_id {
-  max-width: 900px;
-  margin: 0 auto;
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 80px auto;
+  border-radius: 20px;
+  box-shadow: 2px 4px 6px rgba(28, 6, 49, 0.1);
+  background: white;
 }
-.post_id .post-header {
-  text-align: center;
-  margin-bottom: 5px;
-  img {
-    margin-bottom: 5px;
-    max-width: 400px
-  }
-
-  h1 {
-    font-size:2.5rem;
-  }
-  p {
-    color: #999999;
-    font-size:1.7rem;
-  }
-}
-.post-body {
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.title{
-  margin: 30px 0;
-  text-align: center;
-}
-// .comment {
-//   padding: 20px;
-//   width: 600px;
-//   margin-bottom: 20px;
-//   background-color: #eee;
-//   .name {
-//     margin-bottom: 12px;
-//     font-size: 24px;
-//     color: #5c4de7;
-//   }
-// }
-
 </style>
 
