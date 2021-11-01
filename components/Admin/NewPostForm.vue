@@ -4,8 +4,8 @@
       <form @submit.prevent="onSubmit">
          <AppInput v-model="post.author" holder="author"></AppInput>
         <AppInput v-model="post.title" holder="title">  </AppInput>
-        <!-- <AppInput  v-model="post.img" type="file" holder="img"></AppInput> -->
-        <input type="file"  @change="handleChange">
+        <!-- <AppInput  @change="handleChange" type="file" holder="post.filePath"></AppInput> -->
+        <input type="file"  @change="handleChange" holder="post.filePath">
         <AppTextArea v-model="post.content" holder="content"></AppTextArea>
 
         <!-- buttons -->
@@ -31,8 +31,7 @@ export default {
       post: this.postEdit ? { ...this.postEdit } : {
         author: '',
         title: '',
-        imageUrl: '',
-        content: ''
+        content: '',
       },
 
       types: ['image/png', 'image/jpeg', 'image/jpg']
@@ -44,10 +43,12 @@ export default {
          return this.$store.dispatch('uploadImage', this.file)
           .then(res => {
             this.post.filePath = res
+            // console.log(res)
             this.$emit('submit', this.post)
           })
       }
       else {
+        this.post.filePath = "https://firebasestorage.googleapis.com/v0/b/travel-blog-ffe19.appspot.com/o/images%2Fno-image.png?alt=media&token=8d586fb7-71e4-4084-9091-853fb9bdf07e"
         this.$emit('submit', this.post)
       }
     },

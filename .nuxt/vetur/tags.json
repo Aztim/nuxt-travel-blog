@@ -20,6 +20,12 @@
   "AdminNewPostForm": {
     "description": "Auto imported from components/Admin/NewPostForm.vue"
   },
+  "Comments": {
+    "description": "Auto imported from components/Comments/Comments.vue"
+  },
+  "CommentsNewComment": {
+    "description": "Auto imported from components/Comments/NewComment.vue"
+  },
   "BlogPost": {
     "description": "Auto imported from components/Blog/Post.vue"
   },
@@ -28,18 +34,6 @@
   },
   "BlogPostsList": {
     "description": "Auto imported from components/Blog/PostsList.vue"
-  },
-  "Comments": {
-    "description": "Auto imported from components/Comments/Comments.vue"
-  },
-  "CommentsNewComment": {
-    "description": "Auto imported from components/Comments/NewComment.vue"
-  },
-  "GalleryPhoto": {
-    "description": "Auto imported from components/Gallery/Photo.vue"
-  },
-  "GalleryPhotoList": {
-    "description": "Auto imported from components/Gallery/PhotoList.vue"
   },
   "UIIntro": {
     "description": "Auto imported from components/UI/Intro.vue"
@@ -58,5 +52,11 @@
   },
   "UIControlsTextArea": {
     "description": "Auto imported from components/UI/Controls/TextArea.vue"
+  },
+  "GalleryPhoto": {
+    "description": "Auto imported from components/Gallery/Photo.vue"
+  },
+  "GalleryPhotoList": {
+    "description": "Auto imported from components/Gallery/PhotoList.vue"
   }
 }

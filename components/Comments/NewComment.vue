@@ -1,5 +1,5 @@
 <template>
-  <form  @keypress.enter.prevent="handleSubmit">
+  <form  @keypress.enter.prevent="handleSubmit" class="comments">
   <!-- <form  @submit.prevent="handleSubmit"> -->
     <AppInput
       v-model="comment.name"
@@ -54,22 +54,25 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
+  .comments {
+     textarea, input {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 6px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 0;
+      border-radius: 20px;
+      font-family: inherit;
+      outline: none;
+    }
+  }
   form {
     margin: 10px;
   }
 
-  textarea, input {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 6px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 0;
-    border-radius: 20px;
-    font-family: inherit;
-    outline: none;
-  }
+
 
   input {
     background: #fafafa;;

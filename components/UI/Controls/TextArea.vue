@@ -1,5 +1,5 @@
 <template>
-  <div class="control">
+  <!-- <div class="control"> -->
     <!-- <label> <slot /> </label> -->
     <textarea
       :value="value"
@@ -8,7 +8,7 @@
       :placeholder="holder"
       @input="$emit('input', $event.target.value)">
     </textarea>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>

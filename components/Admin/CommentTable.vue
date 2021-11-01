@@ -35,7 +35,8 @@ table {
   border-collapse: separate;
   border-spacing: 0 14px;
   thead th {
-    padding: 20px 22px;
+    padding: 20px 16px;
+    text-align: left;
     white-space: nowrap;
     font-size: 20px;
   }

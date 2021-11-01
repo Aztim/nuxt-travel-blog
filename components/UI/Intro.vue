@@ -1,11 +1,13 @@
 <template>
-  <h1 class="heading">
-    <span v-for="(l, index) in title"
-    :key="index"
-    :class="l === ' ' ? 'space' : null"
-    >{{l}}</span>
-    <slot />
-  </h1>
+  <div class="heading">
+    <h1 >
+      <span v-for="(l, index) in title"
+      :key="index"
+      :class="l === ' ' ? 'space' : null"
+      >{{l}}</span>
+    </h1>
+      <slot />
+  </div>
 </template>
 
 <script>

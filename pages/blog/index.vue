@@ -20,10 +20,8 @@
             <div class="post-title">
               <!-- <a href="#">Why should boys have all the fun? it's the women who are making india an
                   alcohol-loving contry</a> -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
-                  adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
-                  nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
-                  illum similique veniam tempore unde?
+              <p>
+                {{ post.content }}
               </p>
               <nuxt-link :to="`/blog/${post.id}`">
                 <button class="btn post-btn">

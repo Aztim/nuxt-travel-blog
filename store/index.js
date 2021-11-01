@@ -137,6 +137,7 @@ export const actions = {
   },
 
   editPost ({commit, state}, post) {
+    console.log(state.token)
     return axios.put(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts/${post.id}.json?auth=${state.token}`, post)
       .then(res => {
         commit('editPost', post)
