@@ -197,7 +197,11 @@ header .icons i:hover{
   html{
     font-size: 55%;
   }
-
+   .post-image .post-info{
+    left: 2rem !important;
+    bottom: 1.2rem !important;
+    border-radius: 0% !important;
+  }
 }
 
 @media (max-width:991px){
@@ -239,6 +243,8 @@ header .icons i:hover{
     background:#222;
   }
 
+
+
 }
 
 @media (max-width:450px){
@@ -246,6 +252,11 @@ header .icons i:hover{
   html{
     font-size: 50%;
   }
+
+  .site-content .post-title p{
+    display: none;
+  }
+
 
   .heading span{
     font-size: 2.5rem;

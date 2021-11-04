@@ -3,32 +3,61 @@
   <section class="brand-container">
     <div class="swiper-container brand-slider">
       <div class="swiper-wrapper">
-        <VueSlickCarousel v-bind="settings">
+         <swiper class="swiper"
+          :options="swiperOption"
+        >
           <div
             class="swiper-slide"
             v-for="img in images"
             :key="img.id">
               <img :src="img.imageUrl" alt="">
           </div>
-        </VueSlickCarousel>
+
+        </swiper>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-  import VueSlickCarousel from 'vue-slick-carousel'
-  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
-  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-
+  // import VueSlickCarousel from 'vue-slick-carousel'
+  // import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+  // // optional style for arrows & dots
+  // import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
 export default {
   components: {
-    VueSlickCarousel
+    // VueSlickCarousel
+    Swiper,
+    SwiperSlide
   },
   data() {
     return {
+      swiperOption: {
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop:true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false
+        },
+            breakpoints: {
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4
+            },
+            1200: {
+              slidesPerView: 5,
+            }
+        },
+
+      },
       images: [
         {
           id: 1,
@@ -56,26 +85,24 @@ export default {
            imageUrl: require("~/static/img/brands/6.jpg")
         },
       ],
-       settings:
-        {
-        "arrows": false,
-        "dots": false,
-        "infinite": true,
-        "slidesToShow": 4,
-        "slidesToScroll": 1,
-        "autoplay": true,
-        "speed": 2000,
-        "autoplaySpeed": 2000,
-        "cssEase": "linear"
-      }
+      //  settings:
+      //   {
+      //   "arrows": false,
+      //   "dots": false,
+      //   "infinite": true,
+      //   "slidesToShow": 4,
+      //   "slidesToScroll": 1,
+      //   "autoplay": true,
+      //   "speed": 2000,
+      //   "autoplaySpeed": 2000,
+      //   "cssEase": "linear"
+      // }
     }
   }
 }
 </script>
 
 <style>
-/* .brand-container{
-  text-align: center;
-} */
+
 </style>
 

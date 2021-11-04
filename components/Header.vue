@@ -6,22 +6,16 @@
       <span>Travel</span>Blog
     </nuxt-link>
 
-     <!-- <nav class="navbar" :class="{ active: isActive }">
-      <a href="#home">home</a>
-      <a href="#book">book</a>
-      <a href="#packages">packages</a>
-      <a href="#services">services</a>
-      <a href="#gallery">gallery</a>
-      <a href="#review">review</a>
-      <a href="#contact">contact</a>
-    </nav> -->
-
     <div class="content">
-      <nav class="navbar" :class="{ active: isActive }" v-for="link in links" :key="link.title">
+      <nav class="navbar" :class="{ active: isActive }" >
         <nuxt-link
+          v-for="link in links"
+          :key="link.title"
           class="navbar-link"
           :title="link.title"
-          :to="link.url">
+          :to="link.url"
+          @click.native="isActive = false"
+          >
             {{ link.title }}
         </nuxt-link>
       </nav>

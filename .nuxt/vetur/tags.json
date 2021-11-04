@@ -14,6 +14,15 @@
   "Promo": {
     "description": "Auto imported from components/Promo.vue"
   },
+  "BlogPost": {
+    "description": "Auto imported from components/Blog/Post.vue"
+  },
+  "BlogPostPreview": {
+    "description": "Auto imported from components/Blog/PostPreview.vue"
+  },
+  "BlogPostsList": {
+    "description": "Auto imported from components/Blog/PostsList.vue"
+  },
   "AdminCommentTable": {
     "description": "Auto imported from components/Admin/CommentTable.vue"
   },
@@ -26,14 +35,11 @@
   "CommentsNewComment": {
     "description": "Auto imported from components/Comments/NewComment.vue"
   },
-  "BlogPost": {
-    "description": "Auto imported from components/Blog/Post.vue"
+  "GalleryPhoto": {
+    "description": "Auto imported from components/Gallery/Photo.vue"
   },
-  "BlogPostPreview": {
-    "description": "Auto imported from components/Blog/PostPreview.vue"
-  },
-  "BlogPostsList": {
-    "description": "Auto imported from components/Blog/PostsList.vue"
+  "GalleryPhotoList": {
+    "description": "Auto imported from components/Gallery/PhotoList.vue"
   },
   "UIIntro": {
     "description": "Auto imported from components/UI/Intro.vue"
@@ -52,11 +58,5 @@
   },
   "UIControlsTextArea": {
     "description": "Auto imported from components/UI/Controls/TextArea.vue"
-  },
-  "GalleryPhoto": {
-    "description": "Auto imported from components/Gallery/Photo.vue"
-  },
-  "GalleryPhotoList": {
-    "description": "Auto imported from components/Gallery/PhotoList.vue"
   }
 }
