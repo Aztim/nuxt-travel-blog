@@ -1,6 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    // title: 'nuxt-travel-blog',
     title: 'nuxt-travel-blog',
     htmlAttrs: {
       lang: 'en'
@@ -8,7 +9,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Travel-blog' },
+      // { hid: 'description', name: 'description', content: 'Travel-blog' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

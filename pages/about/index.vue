@@ -18,6 +18,28 @@
   </div>
 </template>
 
+<script>
+  export default {
+    head () {
+      let title = 'About',
+      descr = 'About My Blog',
+      type = 'site'
+      return {
+        title: title,
+        meta: [
+          {hid: 'og:title', name: 'og:title', content: title},
+          {hid: 'discription', name: 'discription', content: descr},
+          {hid: 'og:discription', name: 'og:discription', content: descr},
+          {hid: 'og:type', name: 'og:type', content: type}
+        ]
+    }
+  }
+
+
+  }
+</script>
+
+
 <style lang="scss">
 .about {
   text-align: center;

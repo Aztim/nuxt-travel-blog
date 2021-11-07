@@ -14,6 +14,12 @@
   "Promo": {
     "description": "Auto imported from components/Promo.vue"
   },
+  "AdminCommentTable": {
+    "description": "Auto imported from components/Admin/CommentTable.vue"
+  },
+  "AdminNewPostForm": {
+    "description": "Auto imported from components/Admin/NewPostForm.vue"
+  },
   "BlogPost": {
     "description": "Auto imported from components/Blog/Post.vue"
   },
@@ -22,12 +28,6 @@
   },
   "BlogPostsList": {
     "description": "Auto imported from components/Blog/PostsList.vue"
-  },
-  "AdminCommentTable": {
-    "description": "Auto imported from components/Admin/CommentTable.vue"
-  },
-  "AdminNewPostForm": {
-    "description": "Auto imported from components/Admin/NewPostForm.vue"
   },
   "Comments": {
     "description": "Auto imported from components/Comments/Comments.vue"

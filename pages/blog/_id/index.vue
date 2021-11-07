@@ -19,6 +19,22 @@ import NewComment from '@/components/Comments/NewComment.vue'
 
 export default {
   components: { Post,Comments, NewComment },
+  head () {
+    let title = this.post.title,
+    descr = this.post.descr,
+    img = `${this.post.img}`,
+    type = 'site'
+    return {
+      title: title,
+      meta: [
+        {hid: 'og:title', name: 'og:title', content: title},
+        {hid: 'discription', name: 'discription', content: descr},
+        {hid: 'og:discription', name: 'og:discription', content: descr},
+        {hid: 'og:type', name: 'og:type', content: type},
+        {hid: 'og:img', name: 'og:img', content: img}
+      ]
+    }
+  },
   async asyncData (context) {
     let [post, comments] = await Promise.all([
       axios.get(`https://travel-blog-ffe19-default-rtdb.firebaseio.com/posts/${context.params.id}.json`),

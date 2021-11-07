@@ -64,6 +64,20 @@ import aosMixin from '~/mixin/aos'
 // import {limit} from '~/mixin/vars'
 // import Pagination from '@/components/UI/Pagination.vue'
 export default {
+  head () {
+    let title = 'Posts',
+    descr = 'My Posts',
+    type = 'site'
+    return {
+      title: title,
+      meta: [
+        {hid: 'og:title', name: 'og:title', content: title},
+        {hid: 'discription', name: 'discription', content: descr},
+        {hid: 'og:discription', name: 'og:discription', content: descr},
+        {hid: 'og:type', name: 'og:type', content: type}
+      ]
+    }
+  },
  data () {
     return {
       number: 0
