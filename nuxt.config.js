@@ -9,6 +9,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'yandex-verification', content: 'KEY' },
+      { name: 'google-site-verification', content: 'KEY' },
       // { hid: 'description', name: 'description', content: 'Travel-blog' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
@@ -57,15 +59,24 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-
+    // ['@nuxtjs/google-analytics', { id: 'UA-KEY' }],
+    // ['@nuxtjs/yandex-metrika', {
+    //   id: KEY,
+    //   webvisor: false,
+    //   clickmap: true,
+    //   trackLinks: true
+    // }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-
+    vendor: [
+      'vue',
+      'axios'
+    ]
   },
   // Firebase key
   env: {
-    fbAPIKey: 'AIzaSyCLdHK--LIaJzh6NZBtM7SPRLJrAq2I7HA'
+    fbAPIKey: process.env.MY_SECRET_KEY
   }
 }
