@@ -19,7 +19,7 @@
     "lodash": "^4.17.21",
     "nuxt": "^2.15.7",
     "nuxt-fontawesome": "^0.4.0",
-    "swiper": "^5.4.5",
+    "swiper": "^6.5.1",
     "vue-awesome-swiper": "^4.1.1",
     "vue-slick-carousel": "^1.0.6",
     "vuejs-paginate": "^2.1.0"
