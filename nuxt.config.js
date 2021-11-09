@@ -9,8 +9,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'yandex-verification', content: 'KEY' },
-      { name: 'google-site-verification', content: 'KEY' },
+      // { name: 'yandex-verification', content: 'KEY' },
+      // { name: 'google-site-verification', content: 'KEY' },
       // { hid: 'description', name: 'description', content: 'Travel-blog' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
@@ -18,7 +18,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:"stylesheet", href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap'},
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'},
-      // { rel: "stylesheet", href: "https://unpkg.com/swiper@7/swiper-bundle.min.css" }
     ]
   },
 

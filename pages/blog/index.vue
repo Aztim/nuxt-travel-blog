@@ -1,11 +1,10 @@
 <template>
   <div>
-    <!-- <PostsList :posts="postsLoaded" />s -->
     <section class="container blog" >
        <Intro title="My posts: "/>
       <div class="site-content">
         <div class="posts">
-          <div class="post-content" v-for="post in postsLoaded" :key="post.id" data-aos="zoom-in" data-aos-delay="200">
+          <div class="post-content" v-for="post in items" :key="post.id" data-aos="zoom-in" data-aos-delay="200">
             <div class="post-image">
               <div>
                   <img :src="post.filePath" class="img" alt="blog1" style="height: 600px;">
@@ -18,8 +17,6 @@
             </div>
 
             <div class="post-title">
-              <!-- <a href="#">Why should boys have all the fun? it's the women who are making india an
-                  alcohol-loving contry</a> -->
               <p>
                 {{ post.content }}
               </p>
@@ -32,22 +29,16 @@
           </div>
           <hr>
 
-          <!-- <Pagination
-            :total="postsLoaded.length"
-            :limit="limit"
-            :url="baseUrl"
-            :current-page="currentPage"
-          /> -->
-
-          <!-- <paginate
-            :page-count="10"
+          <paginate
+            v-model="page"
+            :page-count="pageCount"
             :click-handler="pageChangeHandler"
             :prev-text="'Prev'"
             :next-text="'Next'"
-            :container-class="'pagination'"
-            :page-class="'page-item'"
+            :containerClass="'pagination'"
+            class="pagination"
             >
-          </paginate> -->
+          </paginate>
 
         </div>
 
@@ -58,27 +49,12 @@
 
 <script>
 import axios from 'axios'
-// import Paginate from 'vuejs-paginate'
+import Paginate from 'vuejs-paginate'
 import aosMixin from '~/mixin/aos'
-// import paginationMixin from '~/mixin/pagination.mixin'
-// import {limit} from '~/mixin/vars'
-// import Pagination from '@/components/UI/Pagination.vue'
+import paginationMixin from '~/mixin/pagination.mixin'
 export default {
-  head () {
-    let title = 'Posts',
-    descr = 'My Posts',
-    type = 'site'
-    return {
-      title: title,
-      meta: [
-        {hid: 'og:title', name: 'og:title', content: title},
-        {hid: 'discription', name: 'discription', content: descr},
-        {hid: 'og:discription', name: 'og:discription', content: descr},
-        {hid: 'og:type', name: 'og:type', content: type}
-      ]
-    }
-  },
- data () {
+  mixins: [aosMixin, paginationMixin],
+  data () {
     return {
       number: 0
     }
@@ -90,38 +66,21 @@ export default {
       commentsArray
     }
 
-    },
-  // },
-  // components: { Paginate },
+  },
+  components: { Paginate },
   computed: {
     postsLoaded () {
-      return  this.$store.getters.getPostsLoaded
+      return this.$store.getters.getPostsLoaded
     }
-    // commentsLength () {
-    //   this.$store.getters.getCommentsLength
-    // }
-
-  //   limit() {
-  //     return limit
-  //   },
-  //   baseUrl() {
-  //     return this.$route.path
-  //   },
-  //   currentPage() {
-  //     console.log(this.$route)
-  //     return Number(this.$route.query.page || '1')
-  //   },
-  //   offset() {
-  //     return this.currentPage * limit - limit
+  },
+  // watch: {
+  //   postsLoaded() {
+  //     this.setupPagination(this.postsLoaded)
   //   }
   // },
-  // watch: {
-  //   currentPage() {
-  //     this.fetchFeed()
-  //   },
-  //   apiUrl() {
-  //     this.fetchFeed()
-  //   }
+
+  mounted () {
+    this.setupPagination(this.postsLoaded)
   },
   methods: {
     commentsLength(post, ret) {
@@ -134,12 +93,11 @@ export default {
       return num
     }
   },
-  mixins: [aosMixin]
+
 }
 </script>
 
 <style scoped>
-
 /* ---------------- Site Content ----------------*/
 .blog .heading {
   margin-top: 100px;
@@ -193,28 +151,6 @@ export default {
 }
 
 /* /!!!!!!!!!!!!!/ */
-.pagination{
-    display: flex;
-    justify-content: center;
-    /* justify-content: space-between; */
-    list-style-type:none;
-    color: #3f4954;
-    margin: 4rem 0;
-}
-
-/* .pagination li a{
-
-    padding: .6rem .9rem;
-    border-radius: 2rem;
-    margin: 0 .3rem;
-    font-family: cursive;
-}
-
-.pagination .pages{
-    background: #3f4954;
-    color: #ffffff;
-} */
-
 
 
 /* -------x-------- Site Content --------x-------*/
