@@ -43,7 +43,6 @@ export default {
          return this.$store.dispatch('uploadImage', this.file)
           .then(res => {
             this.post.filePath = res
-            // console.log(res)
             this.$emit('submit', this.post)
           })
       }

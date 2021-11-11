@@ -8,7 +8,7 @@
           <div class="post-content" v-for="post in items" :key="post.id">
             <div class="post-image">
               <div>
-                  <img :src="post.filePath" class="img" alt="blog1" style="height: 600px;">
+                  <img :src="post.filePath" class="img"  style="height: 600px;">
               </div>
               <div class="post-info flex-row" >
                   <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin {{ post.author}}</span>
@@ -86,10 +86,10 @@ export default {
     this.setupPagination(this.postsLoaded)
   },
   methods: {
-    commentsLength(post, ret) {
+    commentsLength(post, comments) {
       let num = 0
-      for(let i in ret) {
-        if (ret[i].postId === post) {
+      for(let i in comments) {
+        if (comments[i].postId === post) {
           num++
         }
       }

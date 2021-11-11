@@ -21,8 +21,4 @@
   font-weight: bold;
   color: red;
 }
-
-p {
-
-}
 </style>
