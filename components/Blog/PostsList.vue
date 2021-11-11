@@ -6,7 +6,7 @@
         :admin="admin"
         :post="post"
         :img_height="25"
-        />
+      />
     </div>
   </section>
 </template>

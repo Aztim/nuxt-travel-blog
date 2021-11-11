@@ -162,12 +162,6 @@ header .icons i:hover{
 }
 
 
-
-
-
-
-
-
 /* Footer */
 .footer{
   background:#333;
@@ -267,28 +261,3 @@ header .icons i:hover{
   }
 
 }
-
-/* Pagination */
-
-.pagination{
-  display: flex;
-  justify-content: center;
-  list-style-type:none;
-  color: #3f4954;
-  margin: 4rem 0;
-}
-.pagination li.active {
-  background-color: rgba(255, 165, 0,.2);
-  color: white;
-  border: 1px solid #CD853F;
-}
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-  border: 1px solid #ddd;
-}
-
-.pagination a:hover {background-color: var(--orange)}

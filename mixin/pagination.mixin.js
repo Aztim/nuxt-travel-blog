@@ -12,10 +12,9 @@ export default {
   },
   methods: {
     pageChangeHandler(page) {
+
       this.$router.push(`${this.$route.path}?page=${page}`)
       this.items = this.allItems[page - 1] || this.allItems[0]
-
-      window.scrollTo(0, 0);
     },
     setupPagination(allItems) {
       this.allItems = _.chunk(allItems, this.pageSize) /*Разбивает массив из скольки-то элементов и разбиваем его массив массивов  */

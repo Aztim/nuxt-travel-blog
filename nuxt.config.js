@@ -29,14 +29,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/default.scss',
     '@/assets/main.css',
-
     // { src: '~/assets/default.scss', lang: 'scss' },
     // { src: '~/assets/main.css', lang: 'css' }
   ],
 
   script:[
+    {scrollToTop: true}
     // {src: "https://unpkg.com/swiper@7/swiper-bundle.min.js", crossorigin: "anonymous"}
   ],
 
@@ -45,7 +44,8 @@ export default {
   plugins: [
     '~plugins/app-components.js',
     '~plugins/date-filter.js',
-    '~plugins/swiper.js'
+    '~plugins/swiper.js',
+    {src: '~plugins/vue-paginate.js', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -65,13 +65,20 @@ export default {
     //   clickmap: true,
     //   trackLinks: true
     // }],
+
   ],
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     vendor: [
       'vue',
-      'axios'
+      'axios',
+      'vuejs-paginate'
     ]
   },
   // Firebase key

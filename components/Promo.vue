@@ -17,13 +17,13 @@
 
   <div class="video-container">
     <video
-    :src="video_data[selectedIndex].img"
-    id="video-slider"
-    loop
-    autoplay
-    muted></video>
+      :src="video_data[selectedIndex].img"
+      id="video-slider"
+      loop
+      autoplay
+      muted>
+    </video>
   </div>
-
 
   </section>
 </template>

@@ -6,7 +6,7 @@
       :class="l === ' ' ? 'space' : null"
       >{{l}}</span>
     </h1>
-      <slot />
+    <slot />
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper-content wrapper-content--fixed">
     <section class="about">
-          <Intro title="About my blog:"/>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
+      <Intro title="About my blog:"/>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
       <div class="hero">
 
          <img src="~/static/img/boat/cloud.png" class="cloud" alt="">
@@ -32,10 +32,8 @@
           {hid: 'og:discription', name: 'og:discription', content: descr},
           {hid: 'og:type', name: 'og:type', content: type}
         ]
+      }
     }
-  }
-
-
   }
 </script>
 

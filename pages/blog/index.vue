@@ -4,7 +4,8 @@
        <Intro title="My posts: "/>
       <div class="site-content">
         <div class="posts">
-          <div class="post-content" v-for="post in items" :key="post.id" data-aos="zoom-in" data-aos-delay="200">
+          <!-- <div class="post-content" v-for="post in items" :key="post.id" data-aos="zoom-in" data-aos-delay="200"> -->
+          <div class="post-content" v-for="post in items" :key="post.id">
             <div class="post-image">
               <div>
                   <img :src="post.filePath" class="img" alt="blog1" style="height: 600px;">
@@ -29,6 +30,7 @@
           </div>
           <hr>
 
+        <client-only>
           <paginate
             v-model="page"
             :page-count="pageCount"
@@ -39,6 +41,7 @@
             class="pagination"
             >
           </paginate>
+        </client-only>
 
         </div>
 
@@ -49,10 +52,10 @@
 
 <script>
 import axios from 'axios'
-import Paginate from 'vuejs-paginate'
 import aosMixin from '~/mixin/aos'
 import paginationMixin from '~/mixin/pagination.mixin'
 export default {
+
   mixins: [aosMixin, paginationMixin],
   data () {
     return {
@@ -67,12 +70,12 @@ export default {
     }
 
   },
-  components: { Paginate },
   computed: {
     postsLoaded () {
       return this.$store.getters.getPostsLoaded
     }
   },
+
   // watch: {
   //   postsLoaded() {
   //     this.setupPagination(this.postsLoaded)
@@ -97,7 +100,33 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
+/* Pagination */
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  list-style-type:none;
+  color: #3f4954;
+  margin: 4rem 0;
+}
+.pagination li.active {
+  background-color: rgba(255, 165, 0,.2);
+  color: white;
+  border: 1px solid #CD853F;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a:hover {background-color: var(--orange)}
+
 /* ---------------- Site Content ----------------*/
 .blog .heading {
   margin-top: 100px;
@@ -140,18 +169,10 @@ export default {
     margin: 0 .5rem;
 }
 
-/* .post-content .post-title a{
-    font-family: cursive;
-    font-size: 1.5rem;
-} */
-
 .post-title .post-btn{
   border-radius: 0;
   padding: .7rem 1.5rem;
 }
-
-/* /!!!!!!!!!!!!!/ */
-
 
 /* -------x-------- Site Content --------x-------*/
 
@@ -165,20 +186,11 @@ export default {
     .post-info{
         display: none !important;
     }
-
-    /* footer.footer .container{
-        grid-template-columns: repeat(2, 1fr);
-    } */
 }
 
 @media only screen and (max-width: 520px){
     .post-image{
         height: 40vh;
     }
-
-    /* .site-content .post-content > .post-image .post-info{
-        display: none;
-    } */
-
 }
 </style>

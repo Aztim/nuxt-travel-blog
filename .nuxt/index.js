@@ -17,6 +17,7 @@ import nuxt_plugin_plugin_b852e702 from 'nuxt_plugin_plugin_b852e702' // Source:
 import nuxt_plugin_appcomponents_4436d504 from 'nuxt_plugin_appcomponents_4436d504' // Source: ../plugins/app-components.js (mode: 'all')
 import nuxt_plugin_datefilter_f4b26092 from 'nuxt_plugin_datefilter_f4b26092' // Source: ../plugins/date-filter.js (mode: 'all')
 import nuxt_plugin_swiper_3bb64ef0 from 'nuxt_plugin_swiper_3bb64ef0' // Source: ../plugins/swiper.js (mode: 'all')
+import nuxt_plugin_vuepaginate_0ba587a2 from 'nuxt_plugin_vuepaginate_0ba587a2' // Source: ../plugins/vue-paginate.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -227,6 +228,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_swiper_3bb64ef0 === 'function') {
     await nuxt_plugin_swiper_3bb64ef0(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vuepaginate_0ba587a2 === 'function') {
+    await nuxt_plugin_vuepaginate_0ba587a2(app.context, inject)
   }
 
   // Lock enablePreview in context

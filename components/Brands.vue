@@ -9,8 +9,9 @@
           <div
             class="swiper-slide"
             v-for="img in images"
-            :key="img.id">
-              <img :src="img.imageUrl" alt="">
+            :key="img.id"
+          >
+            <img :src="img.imageUrl" alt="">
           </div>
 
         </swiper>
@@ -20,15 +21,10 @@
 </template>
 
 <script>
-  // import VueSlickCarousel from 'vue-slick-carousel'
-  // import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // // optional style for arrows & dots
-  // import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
   import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
 export default {
   components: {
-    // VueSlickCarousel
     Swiper,
     SwiperSlide
   },
@@ -61,7 +57,6 @@ export default {
       images: [
         {
           id: 1,
-          // imageUrl: require("~/static/img/brands/1.jpg")
           imageUrl: require("~/static/img/brands/1.jpg")
         },
         {
@@ -84,19 +79,7 @@ export default {
           id: 6,
            imageUrl: require("~/static/img/brands/6.jpg")
         },
-      ],
-      //  settings:
-      //   {
-      //   "arrows": false,
-      //   "dots": false,
-      //   "infinite": true,
-      //   "slidesToShow": 4,
-      //   "slidesToScroll": 1,
-      //   "autoplay": true,
-      //   "speed": 2000,
-      //   "autoplaySpeed": 2000,
-      //   "cssEase": "linear"
-      // }
+      ]
     }
   }
 }
