@@ -2,8 +2,8 @@
 𝐓𝐡𝐢𝐬 𝐬𝐢𝐦𝐩𝐥𝐞 𝐧𝐮𝐱𝐭-𝐚𝐩𝐩 𝐰𝐚𝐬 𝐦𝐚𝐝𝐞 𝐢𝐧 𝐨𝐫𝐝𝐞𝐫 𝐭𝐨 𝐚𝐜𝐪𝐮𝐚𝐢𝐧𝐭𝐚𝐧𝐜𝐞 𝐰𝐢𝐭𝐡 𝐍𝐮𝐱𝐭-𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤
 
 ![blog_1](https://user-images.githubusercontent.com/56195913/141749010-23ff11c8-42d6-432d-ad55-1cbe1d59f7dc.png)
-
 ![blog_2](https://user-images.githubusercontent.com/56195913/141749027-d3a6a506-00a3-4970-be32-ad7b4593ce48.png)
+![blog_3](https://user-images.githubusercontent.com/56195913/141749033-69780b48-1d20-4e84-a1dc-3831039ac0ee.png)
 ## Build Setup
 
 ```bash
