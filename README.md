@@ -1,5 +1,6 @@
 # hotel-nuxt-app
 𝐓𝐡𝐢𝐬 𝐬𝐢𝐦𝐩𝐥𝐞 𝐧𝐮𝐱𝐭-𝐚𝐩𝐩 𝐰𝐚𝐬 𝐦𝐚𝐝𝐞 𝐢𝐧 𝐨𝐫𝐝𝐞𝐫 𝐭𝐨 𝐚𝐜𝐪𝐮𝐚𝐢𝐧𝐭𝐚𝐧𝐜𝐞 𝐰𝐢𝐭𝐡 𝐍𝐮𝐱𝐭-𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤
+[url=https://online-letters.ru/][img]https://x-lines.ru/letters/i/cyrillicbasic/0004/000000/42/0/6nq3br9ousekdhr71ntxb8coiooxb8coiuaj5rfn6nq3bjzousekuhr71n19b8couaoxb8cow9aj5rfq6nq3bcxousek4mxousejihr71nw9b8coiroxb8cosdaj5rr46nq3bmby6nq3bjzousejihr71nq9b8couaoxb8cowmaj5rf8rdaj5rfe6nq3bk9ousej5hr71nxxb8coicoxb8coizaj5rferdaj5rr46nq3b88ousekihr71nzxb8coumaj5rfn6nq3bj9ousek5hr71npxb8cow9aj5rrh6nq3b8ty6nq3bc8ousekfhr71ns9b8cowroxb8cotzaj5rfq6nq3bcxousek4mxousej9hr71ni9b8coumaj5rfg6nq3b8zousembhr71nwxb8coixaj5rfr.png[/img][/url]
 
 ![blog_1](https://user-images.githubusercontent.com/56195913/141749010-23ff11c8-42d6-432d-ad55-1cbe1d59f7dc.png)
 ![blog_2](https://user-images.githubusercontent.com/56195913/141749027-d3a6a506-00a3-4970-be32-ad7b4593ce48.png)
