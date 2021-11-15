@@ -7,6 +7,7 @@
 
 𝐘̲𝐨̲𝐮̲ 𝐜̲𝐚̲𝐧̲ 𝐭̲𝐫̲𝐲̲ 𝐢̲𝐭̲ 𝐡̲𝐞̲𝐫̲𝐞̲    https://nuxt-travel-blog.herokuapp.com/
 
+🆆🅷🅰🆃 🅸 🆄🆂🅴🅳 ?
 <table>
   <tr>
     <th>Used technologies</th>
