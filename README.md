@@ -5,7 +5,7 @@
 ![blog_2](https://user-images.githubusercontent.com/56195913/141749027-d3a6a506-00a3-4970-be32-ad7b4593ce48.png)
 ![blog_3](https://user-images.githubusercontent.com/56195913/141749033-69780b48-1d20-4e84-a1dc-3831039ac0ee.png)
 
-𝐘̲𝐨̲𝐮̲ 𝐜̲𝐚̲𝐧̲ 𝐭̲𝐫̲𝐲̲ 𝐢̲𝐭̲ 𝐡̲𝐞̲𝐫̲𝐞̲  https://nuxt-travel-blog.herokuapp.com/blog?page=2
+𝐘̲𝐨̲𝐮̲ 𝐜̲𝐚̲𝐧̲ 𝐭̲𝐫̲𝐲̲ 𝐢̲𝐭̲ 𝐡̲𝐞̲𝐫̲𝐞̲    https://nuxt-travel-blog.herokuapp.com/
 
 ## Build Setup
 
